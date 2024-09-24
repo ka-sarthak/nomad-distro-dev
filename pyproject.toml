@@ -39,6 +39,8 @@ plugins = [
   "nomad-parser-plugins-atomistic>=1.0",
   "nomad-parser-plugins-workflow>=1.0",
   "nomad-parser-plugins-database>=1.0",
+  "nomad-material-processing",
+  "nomad-measurements",
 ]
 dev = ["nomad-lab[parsing, infrastructure, dev]>=1.3.4"]
 
