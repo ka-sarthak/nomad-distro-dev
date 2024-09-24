@@ -94,7 +94,7 @@ nomad-parser-plugins-database = { workspace = true }
 Run the following command to install all dependencies, including the local packages in editable mode:
 
 ```bash
-uv sync --extra-all
+uv sync --all-extras
 ```
 
 5. Running `nomad`.
@@ -112,7 +112,7 @@ After the initial setup, here’s how to manage your daily development tasks.
 If you've added new dependencies or made changes to your environment, install or update them by running:
 
 ```bash
-uv sync --extra-all
+uv sync --all-extras
 ```
 
 This will sync all packages and ensure everything is installed in editable mode.
@@ -152,7 +152,7 @@ uv run ruff format .
 To add a new package, follow setup guide and add it into the packages/ directory and ensure it's listed in pyproject.toml under [tool.uv.sources]. Then, install it by running:
 
 ```bash
-uv sync --extra-all
+uv sync --all-extras
 ```
 
 6. Keeping Up-to-Date
@@ -167,7 +167,7 @@ git pull --recurse-submodules
 Afterward, sync your environment:
 
 ```bash
-uv sync --extra-all
+uv sync --all-extras
 ```
 
 Benefits
