@@ -3685,17 +3685,9 @@ name = "nomad-distribution"
 version = "0.1"
 source = { editable = "." }
 dependencies = [
-    { name = "nomad-lab", extra = ["infrastructure", "parsing"] },
-]
-
-[package.optional-dependencies]
-dev = [
-    { name = "nomad-lab", extra = ["dev", "infrastructure", "parsing"] },
-]
-plugins = [
     { name = "eelsdbconverter" },
     { name = "nomad-aitoolkit" },
-    { name = "nomad-lab" },
+    { name = "nomad-lab", extra = ["infrastructure", "parsing"] },
     { name = "nomad-material-processing" },
     { name = "nomad-measurements" },
     { name = "nomad-normalizer-plugin-bandstructure" },
@@ -3716,32 +3708,39 @@ plugins = [
     { name = "pynxtools", extra = ["convert"] },
 ]
 
+[package.dev-dependencies]
+dev = [
+    { name = "nomad-lab", extra = ["dev", "infrastructure", "parsing"] },
+]
+
 [package.metadata]
 requires-dist = [
-    { name = "eelsdbconverter", marker = "extra == 'plugins'", git = "https://github.com/nomad-coe/nomad-parser-eelsdb.git?rev=entry-point" },
-    { name = "nomad-aitoolkit", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-aitoolkit.git?rev=b203f8eb28dc4b6771a39d5c5b7ad3d9d8583ac8#b203f8eb28dc4b6771a39d5c5b7ad3d9d8583ac8" },
-    { name = "nomad-lab", marker = "extra == 'plugins'", editable = "packages/nomad-FAIR" },
+    { name = "eelsdbconverter", git = "https://github.com/nomad-coe/nomad-parser-eelsdb.git?rev=entry-point" },
+    { name = "nomad-aitoolkit", git = "https://github.com/FAIRmat-NFDI/nomad-aitoolkit.git?rev=b203f8eb28dc4b6771a39d5c5b7ad3d9d8583ac8#b203f8eb28dc4b6771a39d5c5b7ad3d9d8583ac8" },
+    { name = "nomad-lab", editable = "packages/nomad-FAIR" },
     { name = "nomad-lab", extras = ["parsing", "infrastructure"], editable = "packages/nomad-FAIR" },
-    { name = "nomad-lab", extras = ["parsing", "infrastructure", "dev"], marker = "extra == 'dev'", editable = "packages/nomad-FAIR" },
-    { name = "nomad-material-processing", marker = "extra == 'plugins'", editable = "packages/nomad-material-processing" },
-    { name = "nomad-measurements", marker = "extra == 'plugins'", editable = "packages/nomad-measurements" },
-    { name = "nomad-normalizer-plugin-bandstructure", marker = "extra == 'plugins'", specifier = ">=1.0" },
-    { name = "nomad-normalizer-plugin-dos", marker = "extra == 'plugins'", specifier = ">=1.0" },
-    { name = "nomad-normalizer-plugin-simulation-workflow", marker = "extra == 'plugins'", specifier = ">=1.0" },
-    { name = "nomad-normalizer-plugin-soap", marker = "extra == 'plugins'", specifier = ">=1.0" },
-    { name = "nomad-normalizer-plugin-spectra", marker = "extra == 'plugins'", specifier = ">=1.0" },
-    { name = "nomad-normalizer-plugin-system", marker = "extra == 'plugins'", specifier = ">=1.0" },
-    { name = "nomad-parser-plugins-atomistic", marker = "extra == 'plugins'", specifier = ">=1.0" },
-    { name = "nomad-parser-plugins-database", marker = "extra == 'plugins'", specifier = ">=1.0" },
-    { name = "nomad-parser-plugins-electronic", marker = "extra == 'plugins'", specifier = ">=1.0" },
-    { name = "nomad-parser-plugins-workflow", marker = "extra == 'plugins'", specifier = ">=1.0" },
-    { name = "nomad-porous-materials", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-porous-materials.git?rev=522f4a3208077f534f1c5e886527ee2104283d0b#522f4a3208077f534f1c5e886527ee2104283d0b" },
-    { name = "nomad-schema-plugin-run", marker = "extra == 'plugins'", specifier = ">=1.0.1" },
-    { name = "nomad-schema-plugin-simulation-workflow", marker = "extra == 'plugins'", specifier = ">=1.0.1" },
-    { name = "nomad-simulations", marker = "extra == 'plugins'", specifier = "==0.0.1" },
-    { name = "perovskite-solar-cell-database", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git?rev=f394d21abafeb659729af0c94e5f90949fce01c1#f394d21abafeb659729af0c94e5f90949fce01c1" },
-    { name = "pynxtools", extras = ["convert"], marker = "extra == 'plugins'", specifier = "==0.5.0" },
+    { name = "nomad-material-processing", editable = "packages/nomad-material-processing" },
+    { name = "nomad-measurements", editable = "packages/nomad-measurements" },
+    { name = "nomad-normalizer-plugin-bandstructure", specifier = ">=1.0" },
+    { name = "nomad-normalizer-plugin-dos", specifier = ">=1.0" },
+    { name = "nomad-normalizer-plugin-simulation-workflow", specifier = ">=1.0" },
+    { name = "nomad-normalizer-plugin-soap", specifier = ">=1.0" },
+    { name = "nomad-normalizer-plugin-spectra", specifier = ">=1.0" },
+    { name = "nomad-normalizer-plugin-system", specifier = ">=1.0" },
+    { name = "nomad-parser-plugins-atomistic", specifier = ">=1.0" },
+    { name = "nomad-parser-plugins-database", specifier = ">=1.0" },
+    { name = "nomad-parser-plugins-electronic", specifier = ">=1.0" },
+    { name = "nomad-parser-plugins-workflow", specifier = ">=1.0" },
+    { name = "nomad-porous-materials", git = "https://github.com/FAIRmat-NFDI/nomad-porous-materials.git?rev=522f4a3208077f534f1c5e886527ee2104283d0b#522f4a3208077f534f1c5e886527ee2104283d0b" },
+    { name = "nomad-schema-plugin-run", specifier = ">=1.0.1" },
+    { name = "nomad-schema-plugin-simulation-workflow", specifier = ">=1.0.1" },
+    { name = "nomad-simulations", specifier = "==0.0.1" },
+    { name = "perovskite-solar-cell-database", git = "https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git?rev=f394d21abafeb659729af0c94e5f90949fce01c1#f394d21abafeb659729af0c94e5f90949fce01c1" },
+    { name = "pynxtools", extras = ["convert"], specifier = "==0.5.0" },
 ]
+
+[package.metadata.requires-dev]
+dev = [{ name = "nomad-lab", extras = ["parsing", "infrastructure", "dev"], editable = "packages/nomad-FAIR" }]
 
 [[package]]
 name = "nomad-dos-fingerprints"
