@@ -177,7 +177,6 @@ uv sync
 To pull updates from the main repository and submodules, run:
 
 ```bash
-bash
 git pull --recurse-submodules
 ```
 
