@@ -25,14 +25,17 @@ Below are instructions for how to create a dev environment for developing [nomad
    The standalone installer or a global installation is the recommended way.
    (`brew install uv` on macOS or `dnf install uv` on Fedora).
 
-3. Clone the forked repository.
+3. For Windows users, we recommend using the [Devcontainer](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) plugin in VSCode to run the repository inside a container,
+   or alternatively, using [GitHub Codespaces](https://github.com/features/codespaces) to run the project.
+
+4. Clone the forked repository.
 
    ```bash
    git clone https://github.com/<your-username>/dev_distro.git
    cd dev_distro
    ```
 
-4. Run the docker containers with docker compose in
+5. Run the docker containers with docker compose in
    [detached](https://docs.docker.com/guides/language/golang/run-containers/#run-in-detached-mode)
    (--detach or -d) mode.
 
