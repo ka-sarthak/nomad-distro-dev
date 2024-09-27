@@ -1,4 +1,4 @@
-Start by forking main repository (/fair_nfdi/dev_distro) that will house all your plugins.
+Start by forking main repository (/FAIRmat-NDFI/dev_distro) that will house all your plugins.
 
 # NOMAD Dev Distribution
 
@@ -8,152 +8,166 @@ Benefits
 - Centralized codebase: Easier navigation and searching across projects.
 - Better editor support: Improved autocompletion and refactoring.
 - Consistent tooling: Shared linting, testing, and formatting.
+- Flexible plugin management: If you're developing plugins for different deployments
+  with varying requirements, you can easily create different branches for each deployment
+  and configure which plugins to use in the specific branch for that deployment.
 
-Below are instructions for how to create a dev env for developing NOMAD and nomad plugins.
+Below are instructions for how to create a dev environment for developing [nomad-lab](https://gitlab.mpcdf.mpg.de/nomad-lab) and its plugins.
 
-### Basic infra
+## Basic infra
 
 1. Make sure you have [docker](https://docs.docker.com/engine/install/) installed.
    Docker nowadays comes with `docker compose` built in. Prior, you needed to
    install the stand-alone [docker-compose](https://docs.docker.com/compose/install/).
 
-2. Make sure you have [uv](https://docs.astral.sh/uv/getting-started/installation/) installed.
+2. Make sure you have [uv](https://docs.astral.sh/uv/getting-started/installation/) installed. We will use it to setup,
+   maintain, and use the development environment.
    The standalone installer or a global installation is the recommended way.
    (`brew install uv` on macOS or `dnf install uv` on Fedora).
 
-3. Clone the repository.
+3. Clone the forked repository.
 
-```bash
-git clone https://github.com/<your-username>/dev_distro.git
-cd dev_distro
-```
+   ```bash
+   git clone https://github.com/<your-username>/dev_distro.git
+   cd dev_distro
+   ```
 
-4. _On Linux only,_ recursively change the owner of the `.volumes` directory to the nomad user (1000)
+4. _On Linux only,_ recursively change the owner of the `.volumes` directory to the nomad user (1000).
 
-```sh
-sudo chown -R 1000 .volumes
-```
+   ```sh
+   sudo chown -R 1000 .volumes
+   ```
 
-5. Run the docker containers with docker compose in detached (--detach or -d) mode
+5. Run the docker containers with docker compose in
+   [detached](https://docs.docker.com/guides/language/golang/run-containers/#run-in-detached-mode)
+   (--detach or -d) mode.
 
-```sh
-docker compose up -d
-```
+   ```sh
+   docker compose up -d
+   ```
 
-To shutdown the containers:
+   To shutdown the containers:
 
-```sh
-docker compose down
-```
+   ```sh
+   docker compose down
+   ```
 
 ## Developing nomad + plugins locally.
 
-This guide explains how to set up a streamlined development environment for nomad-lab and its plugins using uv workspaces.
+This guide explains how to set up a streamlined development environment for nomad-lab and its plugins using
+[`uv` workspaces](https://docs.astral.sh/uv/concepts/workspaces/#workspaces).
 This approach eliminates the need for multiple pip install commands by leveraging a monorepo and a single installation step.
 
-In this example, we'll set up the development environment for a developer working on the following computational parsers:
-
-- nomad-parser-plugins-electronic
-- nomad-parser-plugins-atomistic
-- nomad-parser-plugins-workflow
-- nomad-parser-plugins-database
+In this example, we'll set up the development environment for a developer working
+on the following plugins: `nomad-parser-plugins-electronic` and
+`nomad-measurements`. The first plugin already comes as a dependency
+in this dev distribution. On the contrary, the second plugin is not listed as a
+dependency. In the following, we take a look at how to setup the environment in
+these two situations.
 
 ### Step-by-Step Setup
 
 1. Update submodules
 
-```bash
-git submodule update --init --recursive
-```
+   This loads the `nomad-lab` package which is already listed as a submodule.
+
+   ```bash
+   git submodule update --init --recursive
+   ```
 
 2. Add local plugins
 
-Add the plugin repositories to the packages/ directory, either as submodules.
+   Assuming that you already have a git repo for your plugins, add them to the
+   `packages/` directory as submodules. In case, you are looking to create a plugin
+   repo from scratch, consider using our plugin template:
+   [nomad-plugin-template](https://github.com/FAIRmat-NFDI/nomad-plugin-template).
 
-```bash
-git submodule add https://github.com/package_name.git packages/package_name
-```
+   ```bash
+   git submodule add https://github.com/<package_name>.git packages/<package_name>
+   ```
 
-For example:
+   Repeat for all the plugin packages you want to add and develop. For our example:
 
-```bash
-git submodule add https://github.com/nomad-coe/atomistic-parsers.git packages/nomad-parser-plugins-atomistic
-```
+   ```bash
+   git submodule add https://github.com/nomad-coe/electronic-parsers.git packages/nomad-parser-plugins-electronic
 
-Repeat for all local dev packages (e.g., nomad-parser-plugins-electronic, nomad-parser-plugins-atomistic, etc.).
+   git submodule add https://github.com/FAIRmat-NFDI/nomad-measurements.git packages/nomad-measurements
+   ```
 
-2. Modify pyproject.toml
+3. Modify `pyproject.toml`
 
-Ensure uv recognizes the local packages by modifying the `pyproject.toml`:
+   To ensure `uv` recognizes the
+   local plugins, we need to make some modifications in the `pyproject.toml`.
+   These include adding the plugin package to `[project.dependencies]` and
+   `[tool.uv.sources]` tables.
+   For the packages listed under `[tool.uv.sources]`, `uv` uses the local code
+   directory made available under `packages/` with the previous
+   step.
 
-```toml
-[tool.uv.workspace]
-members = ["packages/*"]
+   Some of the plugins are already listed under
+   `[project.dependencies]`. If you want to develop one of them, you
+   have to add them under `[tool.uv.sources]`. We do this for `nomad-parser-plugins-electronics`.
 
-[tool.uv.sources]
-nomad-lab = { workspace = true }
-nomad-parser-plugins-electronic = { workspace = true }
-nomad-parser-plugins-atomistic = { workspace = true }
-nomad-parser-plugins-workflow = { workspace = true }
-nomad-parser-plugins-database = { workspace = true }
-...
-```
+   ```toml
+   [tool.uv.sources]
+   ...
+   nomad-parser-plugins-electronic = { workspace = true }
+   ```
+
+   If you're developing a plugin **not** listed under `[project.dependencies]`, you
+   must first add it as a dependency. After adding the dependencies, update the
+   `[tool.uv.sources]` section in your `pyproject.toml` file to reflect the new
+   plugins. You can either add it manually abd run `uv sync`:
+
+   ```toml
+   [project]
+   dependencies = [
+   ...
+   "nomad-measurements",
+   ]
+
+   [tool.uv.sources]
+   ...
+   nomad-measurements = { workspace = true }
+   ```
+
+   Or, you can use `uv add` which adds the dependency and the source in `pyproject.toml`
+   and sets up the environment:
+
+   ```bash
+   uv add nomad-measurements
+   ```
 
 > [!NOTE]
-> If you're developing a plugin not listed under [project.dependencies], you must first add it as a dependency. You can do this with uv:
+> You can also use `uv` to install a specific branch of the plugin submodule.
+>
+> ```bash
+> uv add https://github.com/FAIRmat-NFDI/nomad-measurements --branch <specific-branch-name>
+> ```
 
-```bash
-uv add nomad-measurements
-uv add https://github.com/FAIRmat-NFDI/nomad-parser-vasp --branch develop
-```
+4. Install dependencies
 
-After adding the dependencies, update the [tool.uv.sources] section in your pyproject.toml file to reflect the new plugins:
+   Run the following command to install all dependencies, including the local packages in editable mode:
 
-```toml
-dependencies = [
-  ...
-  "nomad-measurements",
-  "nomad-parser-vasp",
-]
-
-[tool.uv.sources]
-...
-nomad-measurements = { workspace = true }
-nomad-parser-vasp = { workspace = true }
-```
-
-3. Install dependencies
-
-Run the following command to install all dependencies, including the local packages in editable mode:
-
-```bash
-uv sync
-```
+   ```bash
+   uv sync
+   ```
 
 > [!NOTE]
-> `uv sync` and `uv run` automatically manages the virtual environment for you. There's no need to manually create or activate a venv.
+>
+> `uv sync` and `uv run` automatically manages the virtual environment for you.
+> There's no need to manually create or activate a venv.
 > Any `uv run` commands will automatically use the correct environment by default.
+> Read more about `uv` commands to manage the dependencies [here](https://docs.astral.sh/uv/concepts/projects/#managing-dependencies).
 
-4. Running `nomad` api app.
+6. Setup NOMAD GUI
 
-```bash
-uv run nomad admin run appworker
-```
+   This step only needs to be done once.
 
-5. Setup GUI
-
-```bash
-cd packages/nomad-FAIR/gui
-uv run python -m nomad.cli dev gui-env > .env.development
-yarn
-```
-
-6. Start nomad gui
-
-```bash
-cd packages/nomad-FAIR/gui
-yarn start
-```
+   ```bash
+   cd packages/nomad-FAIR/gui
+   uv run python -m nomad.cli dev gui-env > .env.development
+   ```
 
 ### Day-to-Day Development
 
@@ -161,118 +175,158 @@ After the initial setup, here’s how to manage your daily development tasks.
 
 1. Update submodules
 
-```bash
-git submodule update --init --recursive
-```
+   ```bash
+   git submodule update --init --recursive
+   ```
 
 2. Installing dependencies
 
-If you've added new dependencies or made changes to your environment, install or update them by running:
+   If you've added new dependencies or made changes to your environment, install or update them by running:
 
-```bash
-uv sync
-```
+   ```bash
+   uv sync
+   ```
 
-This will sync all packages and ensure everything is installed in editable mode.
+   This will sync all packages and ensure everything is installed in editable mode.
 
-3. Running tests
+3. Running `nomad` api app.
 
-To run tests across the project, use the uv run command to execute pytest in the relevant directory. For instance:
+   ```bash
+   uv run nomad admin run appworker
+   ```
 
-```bash
-uv run --directory packages/package_name pytest
-```
+4. Start NOMAD GUI
 
-This allows you to run tests for a specific parser or package. For running tests across all packages, simply repeat the command for each directory.
+   ```bash
+   cd packages/nomad-FAIR/gui
+   yarn
+   yarn start
+   ```
 
-4. Making code changes
+5. Run the docs server (optional: only if you wish to run the documentation server):
 
-Since all packages are installed in editable mode, changes you make to the code are immediately reflected. Edit your code and rerun tests or the application as needed, without needing to reinstall the packages.
+   ```bash
+   uv run --directory packages/nomad-FAIR mkdocs serve
+   ```
 
-5. Linting & code formatting
+6. Running tests
 
-To check for code style issues using ruff, run the following command:
+   To run tests across the project, use the uv run command to execute pytest in the relevant directory. For instance:
 
-```bash
-uv run ruff check .
-```
+   ```bash
+   uv run --directory packages/package_name pytest
+   ```
 
-This will lint all files.
+   This allows you to run tests for a specific parser or package. For running tests across all packages, simply repeat the command for each directory.
 
-For auto-formatting:
+7. Making code changes
 
-```bash
-uv run ruff format .
-```
+   Since all packages are installed in editable mode, changes you make to the code are immediately reflected. Edit your code and rerun tests or the application as needed, without needing to reinstall the packages.
 
-5. Adding new plugins
+8. Linting & code formatting
 
-To add a new package, follow setup guide and add it into the packages/ directory and ensure it's listed in pyproject.toml under [tool.uv.sources]. Then, install it by running:
+   To check for code style issues using ruff, run the following command:
 
-```bash
-uv sync
-```
+   ```bash
+   uv run ruff check .
+   ```
 
-5. Modifying dependencies in packages.
+   This will lint all files.
 
-```bash
-uv add --package <PACKAGE_NAME> <DEPENDENCY_NAME>
-```
+   For auto-formatting:
 
-For example:
+   ```bash
+   uv run ruff format .
+   ```
 
-```bash
-uv add --package nomad-measurements "pandas>=2.0"
-uv remove --package nomad-lab numpy
-```
+9. Adding new plugins
 
-6. Keeping Up-to-Date
+   To add a new package, follow [setup guide](#step-by-step-setup) and add it into the `packages/` directory and ensure it's listed in `pyproject.toml` under `[tool.uv.sources]`. Then, install it by running:
 
-To pull updates from the main repository and submodules, run:
+   ```bash
+   uv sync
+   ```
 
-```bash
-git pull --recurse-submodules
-```
+10. Removing an existing plugin
 
-Afterward, sync your environment:
+    To remove an existing plugin from the workspace in `packages/` directory, do the following and commit:
 
-```bash
-uv sync
-```
+    ```bash
+    git rm <path-to-submodule>
+    ```
+
+    Then you can remove the plugin from `[tool.uv.sources]` in `pyproject.toml` to
+    stop uv from using the local plugin repository.
+
+    Additionally, if you want to remove the plugin from being a dependency of your
+    NOMAD installation, you can use `uv` to entirely remove it:
+
+    ```bash
+    uv remove <plugin-name>
+    ```
+
+11. Modifying dependencies in packages.
+
+    ```bash
+    uv add --package <PACKAGE_NAME> <DEPENDENCY_NAME>
+    ```
+
+    For example:
+
+    ```bash
+    uv add --package nomad-measurements "pandas>=2.0"
+    uv remove --package nomad-lab numpy
+    ```
+
+12. Keeping Up-to-Date
+
+    To pull updates from the main repository and submodules, run:
+
+    ```bash
+    git pull --recurse-submodules
+    ```
+
+    Afterward, sync your environment:
+
+    ```bash
+    uv sync
+    ```
 
 ### Updating the fork
 
 To keep your fork up to date with the latest changes from the original repository (upstream), follow these steps:
 
 1. Add the upstream Remote
+
    If you haven't already, add the original repository as upstream:
 
-```bash
-git remote add upstream https://github.com/FAIRmat-NFDI/dev_distro.git
-```
+   ```bash
+   git remote add upstream https://github.com/FAIRmat-NFDI/dev_distro.git
+   ```
 
 2. Fetch the Latest Changes from upstream
+
    Fetch the latest commits from the upstream repository:
 
-```bash
-git fetch upstream
-```
+   ```bash
+   git fetch upstream
+   ```
 
 3. Merge upstream/main into Your Local Branch
+
    Switch to the local branch (e.g., main) you want to update, and merge the changes from upstream/main:
 
-```bash
-git checkout main
-git merge upstream/main
-```
+   ```bash
+   git checkout main
+   git merge upstream/main
+   ```
 
-Resolve any merge conflicts if necessary, and commit the merge.
+   Resolve any merge conflicts if necessary, and commit the merge.
 
 4. Push the Updates to Your Fork
+
    After merging, push the updated branch to your fork on GitHub:
 
-```bash
-git push origin main
-```
-
-By following these steps, you ensure that your fork stays in sync with the latest changes from the original repository.
+   ```bash
+   git push origin main
+   ```
