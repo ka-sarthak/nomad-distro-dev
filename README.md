@@ -32,13 +32,7 @@ Below are instructions for how to create a dev environment for developing [nomad
    cd dev_distro
    ```
 
-4. _On Linux only,_ recursively change the owner of the `.volumes` directory to the nomad user (1000).
-
-   ```sh
-   sudo chown -R 1000 .volumes
-   ```
-
-5. Run the docker containers with docker compose in
+4. Run the docker containers with docker compose in
    [detached](https://docs.docker.com/guides/language/golang/run-containers/#run-in-detached-mode)
    (--detach or -d) mode.
 
