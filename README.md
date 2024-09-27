@@ -91,7 +91,8 @@ these two situations.
 3. Modify `pyproject.toml`
 
    To ensure `uv` recognizes the
-   local plugins, we need to make some modifications in the `pyproject.toml`.
+   local plugins (a local copy of your plugin repository available in `packages/` directory),
+   we need to make some modifications in the `pyproject.toml`.
    These include adding the plugin package to `[project.dependencies]` and
    `[tool.uv.sources]` tables.
    For the packages listed under `[tool.uv.sources]`, `uv` uses the local code
