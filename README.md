@@ -18,26 +18,27 @@ Below are instructions for how to create a dev environment for developing [nomad
 
 ## Basic infra
 
-1. Make sure you have [docker](https://docs.docker.com/engine/install/) installed.
+1. Ensure you have [docker](https://docs.docker.com/engine/install/) installed.
    Docker nowadays comes with `docker compose` built in. Prior, you needed to
    install the stand-alone [docker-compose](https://docs.docker.com/compose/install/).
 
-2. Make sure you have [uv](https://docs.astral.sh/uv/getting-started/installation/) installed. We will use it to setup,
-   maintain, and use the development environment.
-   The standalone installer or a global installation is the recommended way.
-   (`brew install uv` on macOS or `dnf install uv` on Fedora).
+2. Install [uv](https://docs.astral.sh/uv/getting-started/installation/). 
+uv is required to manage your development environment. It's recommended to use the standalone installer or perform a global installation.
+(`brew install uv` on macOS or `dnf install uv` on Fedora).
 
-3. For Windows users, we recommend using the [Devcontainer](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) plugin in VSCode to run the repository inside a container,
+3. Install [node.js](https://nodejs.org/en) (v20) and [yarn](https://classic.yarnpkg.com/en/docs/install/)(v1.22). We will use it to setup the GUI.
+
+4. For Windows users, we recommend using the [Devcontainer](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) plugin in VSCode to run the repository inside a container,
    or alternatively, using [GitHub Codespaces](https://github.com/features/codespaces) to run the project.
 
-4. Clone the forked repository.
+5. Clone the forked repository.
 
    ```bash
    git clone https://github.com/<your-username>/dev_distro.git
    cd dev_distro
    ```
 
-5. Run the docker containers with docker compose in
+6. Run the docker containers with docker compose in
    [detached](https://docs.docker.com/guides/language/golang/run-containers/#run-in-detached-mode)
    (--detach or -d) mode.
 
