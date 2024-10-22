@@ -211,7 +211,7 @@ After the initial setup, here’s how to manage your daily development tasks.
 
 > [!TIP]
 >
-> To run tests for a specific package in an isolated venv use: `uv sync --package plugin_a && uv run --package plugin_a --directory packages/plugin_a pytest`
+> To run tests for a specific package in an isolated venv use: `uv sync --all-extras --package plugin_a && uv run --package plugin_a --directory packages/plugin_a pytest`
 
 6. Linting & code formatting
 
