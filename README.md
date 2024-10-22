@@ -1,4 +1,4 @@
-Start by forking main repository (/FAIRmat-NDFI/dev_distro) that will house all your plugins.
+Start by forking main repository (/FAIRmat-NDFI/nomad-distro-dev) that will house all your plugins.
 
 # NOMAD Dev Distribution
 
@@ -34,8 +34,8 @@ uv is required to manage your development environment. It's recommended to use t
 5. Clone the forked repository.
 
    ```bash
-   git clone https://github.com/<your-username>/dev_distro.git
-   cd dev_distro
+   git clone https://github.com/<your-username>/nomad-distro-dev.git
+   cd nomad-distro-dev
    ```
 
 6. Run the docker containers with docker compose in
