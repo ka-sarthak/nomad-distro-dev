@@ -121,7 +121,7 @@ these two situations.
 > You can also use `uv` to install a specific branch of the plugin submodule.
 >
 > ```bash
-> uv add https://github.com/FAIRmat-NFDI/nomad-measurements --branch <specific-branch-name>
+> uv add https://github.com/FAIRmat-NFDI/nomad-measurements.git --branch <specific-branch-name>
 > ```
 
    Or you can modify the `pyproject.toml` file manually:
