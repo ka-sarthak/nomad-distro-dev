@@ -76,12 +76,12 @@ cmd = "yarn"
 cwd = "packages/nomad-FAIR/gui"
 
 [tool.poe.tasks.gen-gui-test-env]
-cmd = "python -m nomad.cli dev gui-config"
+cmd = "python -W ignore -m nomad.cli dev gui-config"
 capture_stdout = "packages/nomad-FAIR/gui/tests/env.js"
 env = { NOMAD_CONFIG = "gui/tests/nomad.yaml" }
 
 [tool.poe.tasks.gen-gui-test-artifacts]
-cmd = "python -m nomad.cli dev gui-artifacts"
+cmd = "python -W ignore -m nomad.cli dev gui-artifacts"
 capture_stdout = "packages/nomad-FAIR/gui/tests/artifacts.js"
 env = { NOMAD_CONFIG = "gui/tests/nomad.yaml" }
 deps = ["gen-gui-test-env"]
