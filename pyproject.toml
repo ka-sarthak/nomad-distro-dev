@@ -54,7 +54,7 @@ setup = ["submodule", "gui-env", "gui-setup"]
 lint = ["ruff-lint", "ruff-format"]
 
 [tool.poe.tasks.gui-env]
-cmd = "python -m nomad.cli dev gui-env"
+cmd = "python -W ignore -m nomad.cli dev gui-env"
 capture_stdout = "packages/nomad-FAIR/gui/.env.development"
 
 [tool.poe.tasks.docs]
@@ -78,12 +78,12 @@ cwd = "packages/nomad-FAIR/gui"
 [tool.poe.tasks.gen-gui-test-env]
 cmd = "python -W ignore -m nomad.cli dev gui-config"
 capture_stdout = "packages/nomad-FAIR/gui/tests/env.js"
-env = { NOMAD_CONFIG = "gui/tests/nomad.yaml" }
+env = { NOMAD_CONFIG = "packages/nomad-FAIR/gui/tests/nomad.yaml" }
 
 [tool.poe.tasks.gen-gui-test-artifacts]
 cmd = "python -W ignore -m nomad.cli dev gui-artifacts"
 capture_stdout = "packages/nomad-FAIR/gui/tests/artifacts.js"
-env = { NOMAD_CONFIG = "gui/tests/nomad.yaml" }
+env = { NOMAD_CONFIG = "packages/nomad-FAIR/gui/tests/nomad.yaml" }
 deps = ["gen-gui-test-env"]
 
 [tool.poe.tasks.gen-nomad-lock]
