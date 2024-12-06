@@ -4,3 +4,6 @@
 [submodule "packages/nomad-FAIR"]
 	path = packages/nomad-FAIR
 	url = https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-FAIR.git
+[submodule "packages/nomad-measurements"]
+	path = packages/nomad-measurements
+	url = https://github.com/FAIRmat-NFDI/nomad-measurements.git
