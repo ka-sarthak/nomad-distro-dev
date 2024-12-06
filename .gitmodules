@@ -6,4 +6,4 @@
 	url = git@github.com:FAIRmat-NFDI/nomad-material-processing.git
 [submodule "packages/nomad-FAIR"]
 	path = packages/nomad-FAIR
-	url = git@gitlab.mpcdf.mpg.de:nomad-lab/nomad-FAIR.git
+	url = https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-FAIR.git
