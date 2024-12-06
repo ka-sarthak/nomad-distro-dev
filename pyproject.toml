@@ -25,7 +25,6 @@ dependencies = [
   "nomad-parser-plugins-atomistic>=1.0",
   "nomad-parser-plugins-workflow>=1.0",
   "nomad-parser-plugins-database>=1.0",
-  "nomad-lab",
   "nomad-material-processing",
   "nomad-measurements",
 ]
