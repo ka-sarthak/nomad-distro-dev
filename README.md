@@ -1,4 +1,4 @@
-Start by forking main repository (/FAIRmat-NDFI/dev_distro) that will house all your plugins.
+Start by forking main repository (/FAIRmat-NDFI/nomad-distro-dev) that will house all your plugins.
 
 # NOMAD Dev Distribution
 
@@ -18,26 +18,27 @@ Below are instructions for how to create a dev environment for developing [nomad
 
 ## Basic infra
 
-1. Make sure you have [docker](https://docs.docker.com/engine/install/) installed.
+1. Ensure you have [docker](https://docs.docker.com/engine/install/) installed.
    Docker nowadays comes with `docker compose` built in. Prior, you needed to
    install the stand-alone [docker-compose](https://docs.docker.com/compose/install/).
 
-2. Make sure you have [uv](https://docs.astral.sh/uv/getting-started/installation/) installed. We will use it to setup,
-   maintain, and use the development environment.
-   The standalone installer or a global installation is the recommended way.
-   (`brew install uv` on macOS or `dnf install uv` on Fedora).
+2. Install [uv](https://docs.astral.sh/uv/getting-started/installation/). 
+uv is required to manage your development environment. It's recommended to use the standalone installer or perform a global installation.
+(`brew install uv` on macOS or `dnf install uv` on Fedora).
 
-3. For Windows users, we recommend using the [Devcontainer](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) plugin in VSCode to run the repository inside a container,
-   or alternatively, using [GitHub Codespaces](https://github.com/features/codespaces) to run the project.
+3. Install [node.js](https://nodejs.org/en) (v20) and [yarn](https://classic.yarnpkg.com/en/docs/install/)(v1.22). We will use it to setup the GUI.
 
-4. Clone the forked repository.
+4. For Windows users, nomad-lab processing doesn't work natively on the platform. We highly recommend using the [Devcontainer](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) 
+plugin in VSCode to run the repository within a container, or alternatively, using [GitHub Codespaces](https://github.com/features/codespaces) to run the project.
+
+5. Clone the forked repository.
 
    ```bash
-   git clone https://github.com/<your-username>/dev_distro.git
-   cd dev_distro
+   git clone https://github.com/<your-username>/nomad-distro-dev.git
+   cd nomad-distro-dev
    ```
 
-5. Run the docker containers with docker compose in
+6. Run the docker containers with docker compose in
    [detached](https://docs.docker.com/guides/language/golang/run-containers/#run-in-detached-mode)
    (--detach or -d) mode.
 
@@ -74,6 +75,7 @@ these two situations.
    git submodule update --init --recursive
    ```
 
+
 2. Add local plugins
 
    Assuming that you already have a git repo for your plugins, add them to the
@@ -104,20 +106,26 @@ these two situations.
    directory made available under `packages/` with the previous
    step.
 
-   Some of the plugins are already listed under
-   `[project.dependencies]`. If you want to develop one of them, you
-   have to add them under `[tool.uv.sources]`. We do this for `nomad-parser-plugins-electronics`.
-
-   ```toml
-   [tool.uv.sources]
-   ...
-   nomad-parser-plugins-electronic = { workspace = true }
-   ```
-
-   If you're developing a plugin **not** listed under `[project.dependencies]`, you
+   To add a new plugin **not** listed under `[project.dependencies]`, you
    must first add it as a dependency. After adding the dependencies, update the
    `[tool.uv.sources]` section in your `pyproject.toml` file to reflect the new
-   plugins. You can either add it manually abd run `uv sync`:
+   plugins.
+
+   You can use `uv add` which adds the dependency and the source in `pyproject.toml`
+   and sets up the environment:
+
+   ```bash
+   uv add nomad-measurements
+   ```
+
+> [!NOTE]
+> You can also use `uv` to install a specific branch of the plugin submodule.
+>
+> ```bash
+> uv add https://github.com/FAIRmat-NFDI/nomad-measurements.git --branch <specific-branch-name>
+> ```
+
+   Or you can modify the `pyproject.toml` file manually:
 
    ```toml
    [project]
@@ -131,19 +139,27 @@ these two situations.
    nomad-measurements = { workspace = true }
    ```
 
-   Or, you can use `uv add` which adds the dependency and the source in `pyproject.toml`
-   and sets up the environment:
+   
+   Some of the plugins are already listed under
+   `[project.dependencies]`. If you want to develop one of them, you
+   have to add them under `[tool.uv.sources]`. We do this for `nomad-parser-plugins-electronics`.
 
-   ```bash
-   uv add nomad-measurements
-   ```
+```toml
+[tool.uv.sources]
+...
+nomad-parser-plugins-electronic = { workspace = true }
+```
 
-> [!NOTE]
-> You can also use `uv` to install a specific branch of the plugin submodule.
->
-> ```bash
-> uv add https://github.com/FAIRmat-NFDI/nomad-measurements --branch <specific-branch-name>
-> ```
+4. Create a `nomad.yaml` file.
+
+This file is used to configure nomad. For more information on configuration options, refer to the detailed [nomad configuration docs](https://nomad-lab.eu/prod/v1/staging/docs/reference/config.html#setting-values-from-a-nomadyaml).
+
+Below is the default configuration for a development environment, using the test realm:
+
+```yaml
+keycloak:
+  realm_name: "fairdi_nomad_test"
+```
 
 ### Day-to-Day Development
 
@@ -171,10 +187,12 @@ After the initial setup, here’s how to manage your daily development tasks.
 3. Start NOMAD GUI
 
    ```bash
-   cd packages/nomad-FAIR/gui
-   yarn
-   yarn start
+   uv run poe gui start
    ```
+
+> [!TIP]
+>
+> `uv run poe gui` maps to `yarn run`, so here you can replace `start` with commands like `test`, `build`, etc.
 
 4. Run the docs server (optional: only if you wish to run the documentation server):
 
@@ -192,21 +210,19 @@ After the initial setup, here’s how to manage your daily development tasks.
 
    This allows you to run tests for a specific parser or package. For running tests across all packages, simply repeat the command for each directory.
 
+> [!TIP]
+>
+> To run tests for a specific package in an isolated venv use: `uv sync --all-extras --package plugin_a && uv run --package plugin_a --directory packages/plugin_a pytest`
+
 6. Linting & code formatting
 
-   To check for code style issues using ruff, run the following command:
+   To check for linting issues using ruff, run the following command:
 
    ```bash
-   uv run ruff check .
+   uv run poe lint
    ```
 
-   This will lint all files.
-
-   For auto-formatting:
-
-   ```bash
-   uv run ruff format .
-   ```
+   You can invoke ruff separately using `uv run ruff` too.
 
 7. Adding new plugins
 
@@ -247,7 +263,14 @@ After the initial setup, here’s how to manage your daily development tasks.
    uv remove --package nomad-lab numpy
    ```
 
-10. Keeping Up-to-Date
+10. Generating gui test artifacts and nomad requirements files
+
+    ```bash
+    uv run poe gen-gui-test-artifacts
+    uv run poe gen-nomad-lock
+    ```
+
+11. Keeping Up-to-Date
 
     To pull updates from the main repository and submodules, run:
 
@@ -270,7 +293,7 @@ To keep your fork up to date with the latest changes from the original repositor
    If you haven't already, add the original repository as upstream:
 
    ```bash
-   git remote add upstream https://github.com/FAIRmat-NFDI/dev_distro.git
+   git remote add upstream https://github.com/FAIRmat-NFDI/nomad-distro-dev.git
    ```
 
 2. Fetch the Latest Changes from upstream
