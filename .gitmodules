@@ -7,3 +7,6 @@
 [submodule "packages/nomad-measurements"]
 	path = packages/nomad-measurements
 	url = https://github.com/FAIRmat-NFDI/nomad-measurements.git
+[submodule "packages/nomad-analysis"]
+	path = packages/nomad-analysis
+	url = https://github.com/FAIRmat-NFDI/nomad-analysis.git
