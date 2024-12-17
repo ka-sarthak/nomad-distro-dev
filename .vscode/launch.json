@@ -45,6 +45,18 @@
       "args": ["-sv", "packages/nomad-FAIR/tests"]
     },
     {
+      "name": "nomad measurements tests",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/packages/nomad-measurements/",
+      "program": "${workspaceFolder}/.venv/bin/pytest",
+      "justMyCode": false,
+      "env": {
+        "_PYTEST_RAISE": "1"
+      },
+      "args": ["-sv", "tests"]
+    },
+    {
       "name": "nomad parse",
       "type": "python",
       "request": "launch",
