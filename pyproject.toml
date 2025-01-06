@@ -29,6 +29,7 @@ dependencies = [
   "nomad-material-processing",
   "nomad-measurements",
   "fairmat-readers-transmission",
+  "nomad-ikz-plugin",
 ]
 
 [tool.uv.workspace]
@@ -40,6 +41,7 @@ nomad-material-processing = { workspace = true }
 nomad-measurements = { workspace = true }
 nomad-analysis = { workspace = true }
 fairmat-readers-transmission = { workspace = true }
+nomad-ikz-plugin = { workspace = true }
 
 [tool.uv]
 extra-index-url = [
