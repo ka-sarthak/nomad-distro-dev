@@ -65,6 +65,18 @@
       "args": ["-sv", "tests"]
     },
     {
+      "name": "nomad-ikz-plugin tests",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/packages/nomad-ikz-plugin/",
+      "program": "${workspaceFolder}/.venv/bin/pytest",
+      "justMyCode": false,
+      "env": {
+        "_PYTEST_RAISE": "1"
+      },
+      "args": ["-sv", "."]
+    },
+    {
       "name": "nomad parse",
       "type": "python",
       "request": "launch",
