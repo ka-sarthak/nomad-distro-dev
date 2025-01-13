@@ -1,2 +1,6 @@
 keycloak:
   realm_name: fairdi_nomad_test
+
+plugins:
+  exclude:
+    - nomad_measurements.transmission.parser
