@@ -74,7 +74,7 @@
       "env": {
         "_PYTEST_RAISE": "1"
       },
-      "args": ["-sv", "."]
+      "args": ["-sv", "tests"]
     },
     {
       "name": "nomad parse",

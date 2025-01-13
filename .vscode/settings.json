@@ -6,6 +6,7 @@
     "editor.rulers": [
         88
     ],
+    "files.trimTrailingWhitespace": true,
     "editor.renderWhitespace": "all",
     "editor.tabSize": 4,
     "[python]": {
