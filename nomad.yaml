@@ -3,4 +3,4 @@ keycloak:
 
 plugins:
   exclude:
-    - nomad_measurements.transmission.parser
+    - nomad_measurements.transmission:parser
