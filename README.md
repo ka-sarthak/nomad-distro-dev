@@ -120,6 +120,13 @@ these two situations.
      ```bash
      uv add packages/nomad-measurements
      ```
+
+   Or if you've added multiple plugins as submodules, you should list them all together.
+
+   ```bash
+   uv add packages/nomad-measurements packages/PLUGIN_B packages/PLUGIN_C
+   ```
+ 
    * You can modify the `pyproject.toml` file manually:
 
      ```toml
@@ -323,3 +330,21 @@ To keep your fork up to date with the latest changes from the original repositor
    ```bash
    git push origin main
    ```
+
+### Common Issues and Solutions
+
+1. Failed to install phonopy.
+
+   ```console
+      uv venv -p 3.12
+      uv pip install 'numpy>=1.25'
+      uv pip install 'phonopy==2.11.0' --no-build-isolation
+   ```
+
+2. Failed to install pycifrw.
+   
+   The error usually indicates that clang was missing. `error: command 'clang'`. Installing `clang` should fix this issue.
+   
+
+
+
