@@ -30,7 +30,7 @@
       "request": "launch",
       "justMyCode": false,
       "program": "${workspaceFolder}/.venv/bin/nomad",
-      "args": ["admin", "run", "appworker"]
+      "args": ["admin", "run", "appworker", "--dev"]
     },
     {
       "name": "hub",
@@ -62,7 +62,7 @@
       "env": {
         "_PYTEST_RAISE": "1"
       },
-      "args": ["-sv", "tests"]
+      "args": ["-sv", "tests/test_xrd.py"]
     },
     {
       "name": "nomad-ikz-plugin tests",
