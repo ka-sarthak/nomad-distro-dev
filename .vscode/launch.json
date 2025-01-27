@@ -62,7 +62,7 @@
       "env": {
         "_PYTEST_RAISE": "1"
       },
-      "args": ["-sv", "tests/test_xrd.py"]
+      "args": ["-svx", "tests/test_xrd.py"]
     },
     {
       "name": "nomad-ikz-plugin tests",
@@ -74,7 +74,7 @@
       "env": {
         "_PYTEST_RAISE": "1"
       },
-      "args": ["-sv", "tests"]
+      "args": ["-svx", "tests"]
     },
     {
       "name": "nomad parse",
