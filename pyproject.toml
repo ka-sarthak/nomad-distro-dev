@@ -31,6 +31,7 @@ dependencies = [
   "fairmat-readers-transmission",
   "nomad-ikz-plugin",
   "pynxtools",
+  "plotly<6.0.0",
 ]
 
 [tool.uv.workspace]
