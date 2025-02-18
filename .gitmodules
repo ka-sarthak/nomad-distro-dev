@@ -19,3 +19,6 @@
 [submodule "packages/pynxtools"]
 	path = packages/pynxtools
 	url = https://github.com/FAIRmat-NFDI/pynxtools.git
+[submodule "packages/nomad-material-processing-example"]
+	path = packages/nomad-material-processing-example
+	url = https://github.com/FAIRmat-NFDI/nomad-material-processing-example
