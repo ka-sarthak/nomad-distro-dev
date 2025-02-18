@@ -32,6 +32,7 @@ dependencies = [
   "nomad-ikz-plugin",
   "pynxtools",
   "plotly<6.0.0",
+  "nomad-material-processing-example",
 ]
 
 [tool.uv.workspace]
@@ -45,6 +46,7 @@ nomad-analysis = { workspace = true }
 fairmat-readers-transmission = { workspace = true }
 nomad-ikz-plugin = { workspace = true }
 pynxtools = { workspace = true }
+nomad-material-processing-example = { workspace = true }
 
 [tool.uv]
 extra-index-url = [
@@ -60,7 +62,7 @@ constraint-dependencies = ["hyperspy>=1.7.6"]
 submodule = "git submodule update --init --recursive"
 docker = "docker compose up -d"
 start = "nomad admin run appworker"
-setup = ["submodule", "gui-env", "gui-setup", "docker"]
+setup = ["gui-env", "gui-setup", "docker"]
 lint = ["ruff-lint", "ruff-format"]
 
 [tool.poe.tasks.gui-env]
