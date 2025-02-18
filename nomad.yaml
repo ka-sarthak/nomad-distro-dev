@@ -1,6 +1,9 @@
 keycloak:
   realm_name: fairdi_nomad_test
 
+rfc3161_timestamp:
+  server: http://timestamp.acs.microsoft.com
+
 plugins:
   exclude:
     - nomad_measurements.transmission:parser
