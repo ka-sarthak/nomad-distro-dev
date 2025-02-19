@@ -33,6 +33,7 @@ dependencies = [
   "pynxtools",
   "plotly<6.0.0",
   "nomad-material-processing-example",
+  "nomad-auto-xrd",
 ]
 
 [tool.uv.workspace]
@@ -47,6 +48,7 @@ fairmat-readers-transmission = { workspace = true }
 nomad-ikz-plugin = { workspace = true }
 pynxtools = { workspace = true }
 nomad-material-processing-example = { workspace = true }
+nomad-auto-xrd = { workspace = true }
 
 [tool.uv]
 extra-index-url = [

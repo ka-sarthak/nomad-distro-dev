@@ -22,3 +22,6 @@
 [submodule "packages/nomad-material-processing-example"]
 	path = packages/nomad-material-processing-example
 	url = https://github.com/FAIRmat-NFDI/nomad-material-processing-example
+[submodule "packages/nomad-auto-xrd"]
+	path = packages/nomad-auto-xrd
+	url = git@github.com:FAIRmat-NFDI/nomad-auto-xrd.git
