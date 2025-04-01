@@ -7,20 +7,21 @@ requires-python = ">=3.10"
 license = { file = "LICENSE" }
 dependencies = [
   "nomad-lab[parsing, infrastructure]>=1.3.10",
-  "perovskite-solar-cell-database",
-  'nomad-porous-materials; sys_platform != "win32"',
-  "nomad-aitoolkit",
-  "nomad-simulations>=0.3.1",
-  "pynxtools[apm,ellips,mpes,raman,stm,xps,xrd]>=0.9.1",
-  "nomad-schema-plugin-run>=1.0.1",
-  "nomad-normalizer-plugin-dos>=1.0",
-  "nomad-normalizer-plugin-soap>=1.0",
-  "nomad-normalizer-plugin-spectra>=1.0",
-  "nomad-normalizer-plugin-system>=1.0",
-  "nomad-parser-plugins-electronic>=1.0",
-  "nomad-parser-plugins-atomistic>=1.0",
-  "nomad-parser-plugins-database>=1.0",
-  "nomad-external-eln-integrations",
+  # "perovskite-solar-cell-database",
+  # 'nomad-porous-materials; sys_platform != "win32"',
+  # "nomad-aitoolkit",
+  # "nomad-simulations>=0.3.1",
+  # "pynxtools[apm,ellips,mpes,raman,stm,xps,xrd]>=0.9.1",
+  # "nomad-schema-plugin-run>=1.0.1",
+  # "nomad-schema-plugin-simulation-workflow>=1.0.9",
+  # "nomad-normalizer-plugin-dos>=1.0",
+  # "nomad-normalizer-plugin-soap>=1.0",
+  # "nomad-normalizer-plugin-spectra>=1.0",
+  # "nomad-normalizer-plugin-system>=1.0",
+  # "nomad-parser-plugins-electronic>=1.0",
+  # "nomad-parser-plugins-atomistic>=1.0",
+  # "nomad-parser-plugins-database>=1.0",
+  # "nomad-external-eln-integrations",
   "nomad-analysis",
   "nomad-material-processing",
   "nomad-measurements",
@@ -116,3 +117,24 @@ deps = ["gen-nomad-lock-without-dev"]
 cmd = "uv pip compile -U --universal -p 3.11 --extra parsing --extra infrastructure --annotation-style=line pyproject.toml"
 cwd = "packages/nomad-FAIR"
 capture_stdout = "packages/nomad-FAIR/requirements.txt"
+
+[tool.poe.tasks.api]
+cmd = "uvicorn nomad.app.main:app --reload"
+
+[tool.poe.tasks.worker]
+deps = ["nodemon"]
+cmd = "nodemon -e py -x celery -A nomad.processing.app worker --loglevel=INFO -B -Q celery --concurrency=1"
+
+[tool.poe.tasks.nodemon]
+shell = """
+import subprocess
+
+try:
+    subprocess.run(["nodemon", "--version"], check=True, capture_output=True)
+except:
+    try:
+        subprocess.run(["npm", "install", "-g", "nodemon"], check=True)
+    except:
+        print("Nodemon install failed.")
+"""
+interpreter = "python"
