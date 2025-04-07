@@ -7,3 +7,7 @@ rfc3161_timestamp:
 plugins:
   exclude:
     - nomad_measurements.transmission:parser
+  entry_points:
+    options:
+      'nomad_measurements.xrd:schema':
+        use_hdf5_results: true
