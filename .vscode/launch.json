@@ -65,6 +65,30 @@
       "args": ["-svx", "tests/test_xrd.py"]
     },
     {
+      "name": "nomad auto xrd tests",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/packages/nomad-auto-xrd/",
+      "program": "${workspaceFolder}/.venv/bin/pytest",
+      "justMyCode": false,
+      "env": {
+        "_PYTEST_RAISE": "1"
+      },
+      "args": ["-svx", "tests/test_analysis.py"]
+    },
+    {
+      "name": "nomad analysis tests",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/packages/nomad-analysis/",
+      "program": "${workspaceFolder}/.venv/bin/pytest",
+      "justMyCode": false,
+      "env": {
+        "_PYTEST_RAISE": "1"
+      },
+      "args": ["-svx", "tests"]
+    },
+    {
       "name": "nomad-ikz-plugin tests",
       "type": "python",
       "request": "launch",
