@@ -1,6 +1,7 @@
 {
     "python.analysis.extraPaths": [
-        "./packages/nomad-FAIR"
+        "./packages/nomad-FAIR",
+        "./packages/autoXRD"
     ],
     "python.defaultInterpreterPath": ".pyenv/bin/python",
     "editor.rulers": [
