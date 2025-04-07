@@ -26,7 +26,7 @@ dependencies = [
   "nomad-material-processing",
   "nomad-measurements",
   "fairmat-readers-transmission",
-  "nomad-ikz-plugin",
+  # "nomad-ikz-plugin",
   "plotly<6.0.0",
   "nomad-material-processing-example",
   "nomad-auto-xrd",
@@ -48,6 +48,7 @@ fairmat-readers-transmission = { workspace = true }
 nomad-ikz-plugin = { workspace = true }
 nomad-material-processing-example = { workspace = true }
 nomad-auto-xrd = { workspace = true }
+autoXRD = {workspace = true}
 
 [tool.uv]
 extra-index-url = [
