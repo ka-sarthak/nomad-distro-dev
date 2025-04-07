@@ -47,8 +47,8 @@ nomad-analysis = { workspace = true }
 fairmat-readers-transmission = { workspace = true }
 nomad-ikz-plugin = { workspace = true }
 nomad-material-processing-example = { workspace = true }
-nomad-auto-xrd = { workspace = true }
 autoXRD = {workspace = true}
+nomad-auto-xrd = { workspace = true }
 
 [tool.uv]
 extra-index-url = [
