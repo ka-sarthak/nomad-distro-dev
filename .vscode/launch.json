@@ -65,7 +65,19 @@
       "args": ["-svx", "tests/test_xrd.py"]
     },
     {
-      "name": "nomad auto xrd tests",
+      "name": "nomad auto xrd training",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/packages/nomad-auto-xrd/",
+      "program": "${workspaceFolder}/.venv/bin/pytest",
+      "justMyCode": false,
+      "env": {
+        "_PYTEST_RAISE": "1"
+      },
+      "args": ["-svx", "tests/test_training.py"]
+    },
+    {
+      "name": "nomad auto xrd analysis",
       "type": "python",
       "request": "launch",
       "cwd": "${workspaceFolder}/packages/nomad-auto-xrd/",
