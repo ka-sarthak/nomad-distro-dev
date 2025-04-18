@@ -29,7 +29,7 @@ dependencies = [
   # "nomad-ikz-plugin",
   "plotly<6.0.0",
   "nomad-material-processing-example",
-  "nomad-auto-xrd",
+  "nomad-auto-xrd[dev]",
 ]
 
 [tool.uv.workspace]
