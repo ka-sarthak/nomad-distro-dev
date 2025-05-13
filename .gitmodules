@@ -22,3 +22,6 @@
 [submodule "packages/autoXRD"]
 	path = packages/autoXRD
 	url = https://github.com/Pepe-Marquez/XRD-AutoAnalyzer
+[submodule "packages/nomad-docs"]
+	path = packages/nomad-docs
+	url = https://github.com/FAIRmat-NFDI/nomad-docs.git
