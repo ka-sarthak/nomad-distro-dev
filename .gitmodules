@@ -10,9 +10,6 @@
 [submodule "packages/nomad-analysis"]
 	path = packages/nomad-analysis
 	url = https://github.com/FAIRmat-NFDI/nomad-analysis.git
-[submodule "packages/fairmat-readers-transmission"]
-	path = packages/fairmat-readers-transmission
-	url = https://github.com/FAIRmat-NFDI/readers-transmission.git
 [submodule "packages/nomad-ikz-plugin"]
 	path = packages/nomad-ikz-plugin
 	url = git@github.com:IKZ-Berlin/nomad-ikz-plugin.git
