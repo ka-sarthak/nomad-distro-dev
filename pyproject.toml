@@ -30,10 +30,11 @@ dependencies = [
   "plotly<6.0.0",
   "nomad-material-processing-example",
   "nomad-auto-xrd[dev]",
+  "nomad-docs",
 ]
 
 [tool.uv.workspace]
-members = ["packages/*"]
+members = ["packages/*", "docs"]
 
 [tool.uv.sources]
 nomad-lab = { workspace = true }
@@ -48,6 +49,7 @@ nomad-ikz-plugin = { workspace = true }
 nomad-material-processing-example = { workspace = true }
 autoXRD = {workspace = true}
 nomad-auto-xrd = { workspace = true }
+nomad-docs = {workspace = true}
 
 [tool.uv]
 extra-index-url = [
