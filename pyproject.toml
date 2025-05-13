@@ -44,7 +44,6 @@ nomad-external-eln-integrations = { git = "https://github.com/FAIRmat-NFDI/nomad
 nomad-material-processing = { workspace = true }
 nomad-measurements = { workspace = true }
 nomad-analysis = { workspace = true }
-fairmat-readers-transmission = { workspace = true }
 nomad-ikz-plugin = { workspace = true }
 nomad-material-processing-example = { workspace = true }
 autoXRD = {workspace = true}
