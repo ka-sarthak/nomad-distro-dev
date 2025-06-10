@@ -31,6 +31,9 @@ dependencies = [
   "nomad-material-processing-example",
   "nomad-auto-xrd[dev]",
   "nomad-docs",
+  "demo-temporal[workflow, dev]",
+  "crystallm",
+  "pdi-nomad-plugin",
 ]
 
 [tool.uv.workspace]
@@ -50,6 +53,9 @@ nomad-material-processing-example = { workspace = true }
 autoXRD = {workspace = true}
 nomad-auto-xrd = { workspace = true }
 nomad-docs = { workspace = true }
+demo-temporal = { workspace = true }
+crystallm = { workspace = true }
+pdi-nomad-plugin = { workspace = true }
 
 [tool.uv]
 extra-index-url = [
