@@ -25,3 +25,12 @@
 [submodule "packages/nomad-docs"]
 	path = packages/nomad-docs
 	url = https://github.com/FAIRmat-NFDI/nomad-docs.git
+[submodule "packages/demo-temporal"]
+	path = packages/demo-temporal
+	url = https://github.com/blueraft/demo-temporal.git
+[submodule "packages/CrystaLLM"]
+	path = packages/CrystaLLM
+	url = git@github.com:ka-sarthak/CrystaLLM.git
+[submodule "packages/pdi-nomad-plugin"]
+	path = packages/pdi-nomad-plugin
+	url = https://github.com/PDI-Berlin/pdi-nomad-plugin.git
