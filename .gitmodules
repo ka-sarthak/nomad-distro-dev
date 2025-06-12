@@ -34,3 +34,6 @@
 [submodule "packages/pdi-nomad-plugin"]
 	path = packages/pdi-nomad-plugin
 	url = https://github.com/PDI-Berlin/pdi-nomad-plugin.git
+[submodule "packages/nomad-plugin-crystal-llm"]
+	path = packages/nomad-plugin-crystal-llm
+	url = git@github.com:blueraft/nomad-plugin-crystal-llm.git
