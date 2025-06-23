@@ -34,7 +34,6 @@ dependencies = [
   "demo-temporal[workflow, dev]",
   "crystallm",
   "pdi-nomad-plugin",
-  "nomad-plugin-crystal-llm",
 ]
 
 [tool.uv.workspace]
@@ -57,7 +56,6 @@ nomad-docs = { workspace = true }
 demo-temporal = { workspace = true }
 crystallm = { workspace = true }
 pdi-nomad-plugin = { workspace = true }
-nomad-plugin-crystal-llm = { workspace = true }
 
 [tool.uv]
 extra-index-url = [
