@@ -19,15 +19,9 @@
 [submodule "packages/nomad-auto-xrd"]
 	path = packages/nomad-auto-xrd
 	url = git@github.com:FAIRmat-NFDI/nomad-auto-xrd.git
-[submodule "packages/autoXRD"]
-	path = packages/autoXRD
-	url = https://github.com/Pepe-Marquez/XRD-AutoAnalyzer
 [submodule "packages/nomad-docs"]
 	path = packages/nomad-docs
 	url = https://github.com/FAIRmat-NFDI/nomad-docs.git
-[submodule "packages/demo-temporal"]
-	path = packages/demo-temporal
-	url = https://github.com/blueraft/demo-temporal.git
 [submodule "packages/CrystaLLM"]
 	path = packages/CrystaLLM
 	url = git@github.com:ka-sarthak/CrystaLLM.git
