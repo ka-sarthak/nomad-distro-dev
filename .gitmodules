@@ -34,3 +34,6 @@
 [submodule "packages/pdi-nomad-plugin"]
 	path = packages/pdi-nomad-plugin
 	url = https://github.com/PDI-Berlin/pdi-nomad-plugin.git
+[submodule "packages/nomad-crystallm"]
+	path = packages/nomad-crystallm
+	url = https://github.com/FAIRmat-NFDI/nomad-crystallm.git
