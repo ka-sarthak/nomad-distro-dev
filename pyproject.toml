@@ -34,6 +34,8 @@ dependencies = [
   "demo-temporal[workflow, dev]",
   "crystallm",
   "pdi-nomad-plugin",
+  "nomad-crystallm",
+  "scipy==1.15.3", # pinning scipy to avoid issues with statsmodels
 ]
 
 [tool.uv.workspace]
@@ -56,6 +58,7 @@ nomad-docs = { workspace = true }
 demo-temporal = { workspace = true }
 crystallm = { workspace = true }
 pdi-nomad-plugin = { workspace = true }
+nomad-crystallm = { workspace = true }
 
 [tool.uv]
 extra-index-url = [
