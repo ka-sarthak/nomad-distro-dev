@@ -17,7 +17,7 @@ dependencies = [
   "nomad-docs",
   "crystallm",
   "pdi-nomad-plugin",
-  "nomad-crystallm",
+  "nomad-crystallm[gpu-workflow]",
   "scipy==1.15.3", # pinning scipy to avoid issues with statsmodels
 ]
 
@@ -54,7 +54,7 @@ docker = "docker compose up -d"
 start = "nomad admin run appworker --dev"
 setup = ["gui-env", "gui-setup", "docker", "config"]
 lint = ["ruff-lint", "ruff-format"]
-remove-egg-info = "find . -type d -name *.egg-info -print0 | xargs -0 rm -r"
+cleanup = ["remove-egg-info"]
 
 [tool.poe.tasks.config]
 shell = """
@@ -127,3 +127,6 @@ except:
         print("Nodemon install failed.")
 """
 interpreter = "python"
+
+[tool.poe.tasks.remove-egg-info]
+cmd = "find . -type d -name '*.egg-info' -print0 | xargs -0 rm -r"
