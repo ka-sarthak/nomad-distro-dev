@@ -6,10 +6,10 @@ rfc3161_timestamp:
 
 plugins:
   exclude:
-    - nomad_measurements.transmission:parser
+    - nomad_measurements.transmission:parser_entry_point
   entry_points:
     options:
-      'nomad_measurements.xrd:schema':
+      'nomad_measurements.xrd:schema_entry_point':
         use_hdf5_results: true
 
 temporal:
