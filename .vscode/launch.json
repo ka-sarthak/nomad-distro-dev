@@ -65,6 +65,30 @@
       "args": ["-svx", "tests/test_xrd.py"]
     },
     {
+      "name": "nomad material processing tests",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/packages/nomad-material-processing/",
+      "program": "${workspaceFolder}/.venv/bin/pytest",
+      "justMyCode": false,
+      "env": {
+        "_PYTEST_RAISE": "1"
+      },
+      "args": ["-svx", "tests"]
+    },
+    {
+      "name": "nomad crystallm",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/packages/nomad-crystallm/",
+      "program": "${workspaceFolder}/.venv/bin/pytest",
+      "justMyCode": false,
+      "env": {
+        "_PYTEST_RAISE": "1"
+      },
+      "args": ["-svx", "tests"]
+    },
+    {
       "name": "demo temporal tests",
       "type": "python",
       "request": "launch",
