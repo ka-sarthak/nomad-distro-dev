@@ -55,6 +55,7 @@ start = "nomad admin run appworker --dev"
 setup = ["gui-env", "gui-setup", "docker", "config"]
 lint = ["ruff-lint", "ruff-format"]
 cleanup = ["remove-egg-info"]
+temporal = ["temporal-worker"]
 
 [tool.poe.tasks.config]
 shell = """
@@ -113,6 +114,9 @@ cmd = "uvicorn nomad.app.main:app --reload"
 [tool.poe.tasks.worker]
 deps = ["nodemon"]
 cmd = "nodemon -e py -x celery -A nomad.processing.app worker --loglevel=INFO -B -Q celery --concurrency=1"
+
+[tool.poe.tasks.temporal-worker]
+cmd = "uv run nomad admin run orchestrator-gpu-worker"
 
 [tool.poe.tasks.nodemon]
 shell = """
