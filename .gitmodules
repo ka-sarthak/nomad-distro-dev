@@ -31,3 +31,6 @@
 [submodule "packages/nomad-crystallm"]
 	path = packages/nomad-crystallm
 	url = https://github.com/FAIRmat-NFDI/nomad-crystallm.git
+[submodule "packages/basesection-migration"]
+	path = packages/basesection-migration
+	url = git@github.com:FAIRmat-NFDI/basesections-migration.git
