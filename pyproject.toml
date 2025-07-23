@@ -56,7 +56,7 @@ docker = "docker compose up -d"
 start = "nomad admin run appworker --dev"
 setup = ["gui-env", "gui-setup", "docker", "config"]
 lint = ["ruff-lint", "ruff-format"]
-cleanup = ["remove-egg-info"]
+clean = ["remove-egg-info"]
 temporal = ["temporal-worker"]
 
 [tool.poe.tasks.config]
@@ -135,4 +135,4 @@ except:
 interpreter = "python"
 
 [tool.poe.tasks.remove-egg-info]
-cmd = "find . -type d -name '*.egg-info' -print0 | xargs -0 rm -r"
+cmd = "rm -rf ./**/*.egg-info"
