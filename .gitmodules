@@ -34,3 +34,6 @@
 [submodule "packages/basesection-migration"]
 	path = packages/basesection-migration
 	url = git@github.com:FAIRmat-NFDI/basesections-migration.git
+[submodule "packages/nomad-example"]
+	path = packages/nomad-example
+	url = git@github.com:ka-sarthak/nomad-example.git
