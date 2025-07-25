@@ -20,6 +20,7 @@ dependencies = [
   "nomad-crystallm[gpu-workflow]",
   "scipy==1.15.3", # pinning scipy to avoid issues with statsmodels
   "basesection-migration",
+  "nomad-example",
 ]
 
 [tool.uv.workspace]
@@ -38,6 +39,7 @@ crystallm = { workspace = true }
 pdi-nomad-plugin = { workspace = true }
 nomad-crystallm = { workspace = true }
 basesection-migration = { workspace = true }
+nomad-example = { workspace = true }
 
 [tool.uv]
 extra-index-url = [
