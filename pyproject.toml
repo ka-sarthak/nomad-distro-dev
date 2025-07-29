@@ -21,6 +21,7 @@ dependencies = [
   "scipy==1.15.3", # pinning scipy to avoid issues with statsmodels
   "basesection-migration",
   "nomad-example",
+  "autoxrd",
 ]
 
 [tool.uv.workspace]
@@ -40,6 +41,7 @@ pdi-nomad-plugin = { workspace = true }
 nomad-crystallm = { workspace = true }
 basesection-migration = { workspace = true }
 nomad-example = { workspace = true }
+autoxrd = { workspace = true }
 
 [tool.uv]
 extra-index-url = [
