@@ -37,3 +37,6 @@
 [submodule "packages/nomad-example"]
 	path = packages/nomad-example
 	url = git@github.com:ka-sarthak/nomad-example.git
+[submodule "packages/XRD-AutoAnalyzer"]
+	path = packages/XRD-AutoAnalyzer
+	url = https://github.com/Pepe-Marquez/XRD-AutoAnalyzer.git
