@@ -17,12 +17,11 @@
       "args": ["admin", "run", "app"]
     },
     {
-      "name": "worker",
+      "name": "test entry api",
       "type": "python",
       "request": "launch",
       "justMyCode": false,
-      "program": "${workspaceFolder}/.venv/bin/nomad",
-      "args": ["admin", "run", "worker"]
+      "program": "${workspaceFolder}/read_binary.py",
     },
     {
       "name": "appworker",
@@ -31,6 +30,14 @@
       "justMyCode": false,
       "program": "${workspaceFolder}/.venv/bin/nomad",
       "args": ["admin", "run", "appworker", "--dev"]
+    },
+    {
+      "name": "orchestrator cpu worker",
+      "type": "python",
+      "request": "launch",
+      "justMyCode": false,
+      "program": "${workspaceFolder}/.venv/bin/nomad",
+      "args": ["admin", "run", "orchestrator-cpu-worker"]
     },
     {
       "name": "hub",
