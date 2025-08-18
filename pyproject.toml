@@ -4,7 +4,7 @@ description = """This is a personal development distribution of NOMAD, primarily
 for developing and testing NOMAD plugins."""
 version = "0.1"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 license = { file = "LICENSE" }
 dependencies = [
   "nomad-lab[parsing, infrastructure]>=1.3.10",
@@ -21,7 +21,8 @@ dependencies = [
   "scipy==1.15.3", # pinning scipy to avoid issues with statsmodels
   "basesection-migration",
   "nomad-example",
-  "autoxrd",
+  "autoXRD",
+  "nomad-dtu-nanolab-plugin",
 ]
 
 [tool.uv.workspace]
@@ -41,7 +42,8 @@ pdi-nomad-plugin = { workspace = true }
 nomad-crystallm = { workspace = true }
 basesection-migration = { workspace = true }
 nomad-example = { workspace = true }
-autoxrd = { workspace = true }
+autoXRD = { workspace = true }
+nomad-dtu-nanolab-plugin = { workspace = true }
 
 [tool.uv]
 extra-index-url = [
