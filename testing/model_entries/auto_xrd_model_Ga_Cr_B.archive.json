@@ -1,0 +1,23 @@
+{
+    "data": {
+        "m_def": "nomad_auto_xrd.schema.AutoXRDModel",
+        "name": "auto_xrd_model_Ga_Cr_B",
+        "includes_pdf": true,
+        "simulation_settings": {
+            "min_angle": 10,
+            "max_angle": 60
+        },
+        "training_settings": {
+            "num_epochs": 30
+        }
+    },
+    "results": {
+        "material": {
+            "elements": [
+                "Ga",
+                "Cr",
+                "B"
+            ]
+        }
+    }
+}

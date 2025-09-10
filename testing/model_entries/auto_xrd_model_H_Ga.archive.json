@@ -1,0 +1,22 @@
+{
+    "data": {
+        "m_def": "nomad_auto_xrd.schema.AutoXRDModel",
+        "name": "auto_xrd_model_H_Ga",
+        "includes_pdf": false,
+        "simulation_settings": {
+            "min_angle": 32,
+            "max_angle": 80
+        },
+        "training_settings": {
+            "num_epochs": 50
+        }
+    },
+    "results": {
+        "material": {
+            "elements": [
+                "H",
+                "Ga"
+            ]
+        }
+    }
+}

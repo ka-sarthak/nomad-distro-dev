@@ -1,0 +1,23 @@
+{
+    "data": {
+        "m_def": "nomad_auto_xrd.schema.AutoXRDModel",
+        "name": "auto_xrd_model_Fe_Be_Sc",
+        "includes_pdf": false,
+        "simulation_settings": {
+            "min_angle": 32,
+            "max_angle": 60
+        },
+        "training_settings": {
+            "num_epochs": 20
+        }
+    },
+    "results": {
+        "material": {
+            "elements": [
+                "Fe",
+                "Be",
+                "Sc"
+            ]
+        }
+    }
+}

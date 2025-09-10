@@ -1,0 +1,23 @@
+{
+    "data": {
+        "m_def": "nomad_auto_xrd.schema.AutoXRDModel",
+        "name": "auto_xrd_model_N_F_V",
+        "includes_pdf": false,
+        "simulation_settings": {
+            "min_angle": 10,
+            "max_angle": 60
+        },
+        "training_settings": {
+            "num_epochs": 20
+        }
+    },
+    "results": {
+        "material": {
+            "elements": [
+                "N",
+                "F",
+                "V"
+            ]
+        }
+    }
+}

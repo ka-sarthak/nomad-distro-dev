@@ -1,0 +1,24 @@
+{
+    "data": {
+        "m_def": "nomad_auto_xrd.schema.AutoXRDModel",
+        "name": "auto_xrd_model_O_C_Al_Ni",
+        "includes_pdf": false,
+        "simulation_settings": {
+            "min_angle": 10,
+            "max_angle": 76
+        },
+        "training_settings": {
+            "num_epochs": 20
+        }
+    },
+    "results": {
+        "material": {
+            "elements": [
+                "O",
+                "C",
+                "Al",
+                "Ni"
+            ]
+        }
+    }
+}

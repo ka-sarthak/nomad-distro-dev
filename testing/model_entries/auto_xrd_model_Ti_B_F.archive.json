@@ -1,0 +1,23 @@
+{
+    "data": {
+        "m_def": "nomad_auto_xrd.schema.AutoXRDModel",
+        "name": "auto_xrd_model_Ti_B_F",
+        "includes_pdf": true,
+        "simulation_settings": {
+            "min_angle": 20,
+            "max_angle": 60
+        },
+        "training_settings": {
+            "num_epochs": 20
+        }
+    },
+    "results": {
+        "material": {
+            "elements": [
+                "Ti",
+                "B",
+                "F"
+            ]
+        }
+    }
+}

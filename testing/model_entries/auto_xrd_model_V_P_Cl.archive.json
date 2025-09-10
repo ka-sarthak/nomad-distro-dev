@@ -1,0 +1,23 @@
+{
+    "data": {
+        "m_def": "nomad_auto_xrd.schema.AutoXRDModel",
+        "name": "auto_xrd_model_V_P_Cl",
+        "includes_pdf": false,
+        "simulation_settings": {
+            "min_angle": 20,
+            "max_angle": 80
+        },
+        "training_settings": {
+            "num_epochs": 30
+        }
+    },
+    "results": {
+        "material": {
+            "elements": [
+                "V",
+                "P",
+                "Cl"
+            ]
+        }
+    }
+}
