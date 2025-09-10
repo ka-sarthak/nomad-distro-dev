@@ -32,12 +32,12 @@
       "args": ["admin", "run", "appworker", "--dev"]
     },
     {
-      "name": "orchestrator cpu worker",
+      "name": "action cpu worker",
       "type": "python",
       "request": "launch",
       "justMyCode": false,
       "program": "${workspaceFolder}/.venv/bin/nomad",
-      "args": ["admin", "run", "orchestrator-cpu-worker"]
+      "args": ["admin", "run", "action-cpu-worker"]
     },
     {
       "name": "hub",

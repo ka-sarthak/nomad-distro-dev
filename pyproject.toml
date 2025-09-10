@@ -124,7 +124,7 @@ deps = ["nodemon"]
 cmd = "nodemon -e py -x celery -A nomad.processing.app worker --loglevel=INFO -B -Q celery --concurrency=1"
 
 [tool.poe.tasks.temporal-worker]
-cmd = "uv run nomad admin run orchestrator-cpu-worker"
+cmd = "uv run nomad admin run action-cpu-worker"
 
 [tool.poe.tasks.nodemon]
 shell = """
