@@ -6,7 +6,8 @@ rfc3161_timestamp:
 
 plugins:
   exclude:
-    - nomad_measurements.transmission:parser_entry_point
+    # - nomad_measurements.xrd:parser_entry_point  # For DTU Plugin testing
+    - nomad_measurements.transmission:parser_entry_point  # For IKZ plugin testing
   entry_points:
     options:
       'nomad_measurements.xrd:schema_entry_point':
