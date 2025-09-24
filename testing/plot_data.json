@@ -1,0 +1,627 @@
+[
+    {
+        "x_position": -2.0,
+        "y_position": -2.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 48.5
+            },
+            {
+                "name": "Ag7P3S11",
+                "space_group": 15,
+                "confidence": 22.5
+            },
+            {
+                "name": "Ag4P2S7",
+                "space_group": 15,
+                "confidence": 14.0
+            }
+        ]
+    },
+    {
+        "x_position": -11.0,
+        "y_position": -2.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag7PS6",
+                "space_group": 198,
+                "confidence": 67.0
+            },
+            {
+                "name": "AgPS3",
+                "space_group": 12,
+                "confidence": 41.5
+            },
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 35.5
+            }
+        ]
+    },
+    {
+        "x_position": -20.0,
+        "y_position": -2.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag7PS6",
+                "space_group": 198,
+                "confidence": 71.0
+            },
+            {
+                "name": "AgPS3",
+                "space_group": 12,
+                "confidence": 59.0
+            },
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 23.5
+            }
+        ]
+    },
+    {
+        "x_position": -29.0,
+        "y_position": -2.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag7PS6",
+                "space_group": 198,
+                "confidence": 68.0
+            },
+            {
+                "name": "AgPS3",
+                "space_group": 12,
+                "confidence": 41.5
+            },
+            {
+                "name": "Ag3PS4",
+                "space_group": 31,
+                "confidence": 26.5
+            }
+        ]
+    },
+    {
+        "x_position": -38.0,
+        "y_position": -2.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "AgPS3",
+                "space_group": 12,
+                "confidence": 83.5
+            },
+            {
+                "name": "Ag7PS6",
+                "space_group": 198,
+                "confidence": 47.0
+            },
+            {
+                "name": "Ag3PS4",
+                "space_group": 31,
+                "confidence": 35.0
+            },
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 33.5
+            }
+        ]
+    },
+    {
+        "x_position": -2.0,
+        "y_position": -11.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag7PS6",
+                "space_group": 198,
+                "confidence": 66.5
+            },
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 34.5
+            },
+            {
+                "name": "Ag4P2S7",
+                "space_group": 15,
+                "confidence": 28.5
+            },
+            {
+                "name": "Ag3PS4",
+                "space_group": 31,
+                "confidence": 18.0
+            }
+        ]
+    },
+    {
+        "x_position": -11.0,
+        "y_position": -11.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag7PS6",
+                "space_group": 198,
+                "confidence": 60.0
+            },
+            {
+                "name": "AgPS3",
+                "space_group": 12,
+                "confidence": 30.5
+            },
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 23.5
+            },
+            {
+                "name": "Ag3PS4",
+                "space_group": 31,
+                "confidence": 19.0
+            }
+        ]
+    },
+    {
+        "x_position": -20.0,
+        "y_position": -11.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag7PS6",
+                "space_group": 198,
+                "confidence": 43.5
+            },
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 43.0
+            },
+            {
+                "name": "Ag3PS4",
+                "space_group": 31,
+                "confidence": 39.0
+            },
+            {
+                "name": "AgPS3",
+                "space_group": 12,
+                "confidence": 23.5
+            },
+            {
+                "name": "Ag4P2S7",
+                "space_group": 15,
+                "confidence": 21.0
+            }
+        ]
+    },
+    {
+        "x_position": -29.0,
+        "y_position": -11.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 47.0
+            },
+            {
+                "name": "Ag4P2S7",
+                "space_group": 15,
+                "confidence": 38.0
+            },
+            {
+                "name": "Ag3PS4",
+                "space_group": 31,
+                "confidence": 14.5
+            }
+        ]
+    },
+    {
+        "x_position": -38.0,
+        "y_position": -11.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "AgPS3",
+                "space_group": 12,
+                "confidence": 48.0
+            },
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 39.0
+            },
+            {
+                "name": "Ag7PS6",
+                "space_group": 198,
+                "confidence": 29.0
+            },
+            {
+                "name": "Ag3PS4",
+                "space_group": 31,
+                "confidence": 26.5
+            }
+        ]
+    },
+    {
+        "x_position": -2.0,
+        "y_position": -20.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag7PS6",
+                "space_group": 198,
+                "confidence": 81.0
+            },
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 39.0
+            },
+            {
+                "name": "Ag7P3S11",
+                "space_group": 15,
+                "confidence": 34.5
+            }
+        ]
+    },
+    {
+        "x_position": -11.0,
+        "y_position": -20.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag7PS6",
+                "space_group": 198,
+                "confidence": 62.0
+            },
+            {
+                "name": "AgPS3",
+                "space_group": 12,
+                "confidence": 37.5
+            },
+            {
+                "name": "Ag4P2S7",
+                "space_group": 15,
+                "confidence": 31.5
+            },
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 28.5
+            },
+            {
+                "name": "Ag4P2S7",
+                "space_group": 152,
+                "confidence": 14.5
+            }
+        ]
+    },
+    {
+        "x_position": -20.0,
+        "y_position": -20.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag4P2S7",
+                "space_group": 15,
+                "confidence": 50.0
+            },
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 49.5
+            }
+        ]
+    },
+    {
+        "x_position": -29.0,
+        "y_position": -20.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 49.0
+            },
+            {
+                "name": "Ag4P2S7",
+                "space_group": 15,
+                "confidence": 49.0
+            }
+        ]
+    },
+    {
+        "x_position": -38.0,
+        "y_position": -20.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 71.0
+            },
+            {
+                "name": "Ag3PS4",
+                "space_group": 31,
+                "confidence": 47.0
+            },
+            {
+                "name": "Ag7P3S11",
+                "space_group": 15,
+                "confidence": 16.5
+            },
+            {
+                "name": "Ag4P2S7",
+                "space_group": 15,
+                "confidence": 15.0
+            }
+        ]
+    },
+    {
+        "x_position": -2.0,
+        "y_position": -29.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 32.5
+            },
+            {
+                "name": "Ag3PS4",
+                "space_group": 31,
+                "confidence": 31.0
+            },
+            {
+                "name": "Ag4P2S7",
+                "space_group": 15,
+                "confidence": 22.5
+            },
+            {
+                "name": "Ag7P3S11",
+                "space_group": 15,
+                "confidence": 19.0
+            },
+            {
+                "name": "Ag7PS6",
+                "space_group": 198,
+                "confidence": 19.0
+            }
+        ]
+    },
+    {
+        "x_position": -11.0,
+        "y_position": -29.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 49.5
+            },
+            {
+                "name": "Ag4P2S7",
+                "space_group": 15,
+                "confidence": 49.5
+            }
+        ]
+    },
+    {
+        "x_position": -20.0,
+        "y_position": -29.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 49.5
+            },
+            {
+                "name": "Ag4P2S7",
+                "space_group": 15,
+                "confidence": 49.0
+            }
+        ]
+    },
+    {
+        "x_position": -29.0,
+        "y_position": -29.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag3PS4",
+                "space_group": 31,
+                "confidence": 50.0
+            },
+            {
+                "name": "Ag4P2S7",
+                "space_group": 15,
+                "confidence": 47.5
+            },
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 17.0
+            },
+            {
+                "name": "Ag4P2S7",
+                "space_group": 152,
+                "confidence": 15.5
+            }
+        ]
+    },
+    {
+        "x_position": -38.0,
+        "y_position": -29.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 98.5
+            },
+            {
+                "name": "Ag3PS4",
+                "space_group": 31,
+                "confidence": 32.0
+            },
+            {
+                "name": "Ag7PS6",
+                "space_group": 198,
+                "confidence": 28.0
+            }
+        ]
+    },
+    {
+        "x_position": -2.0,
+        "y_position": -38.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 63.5
+            },
+            {
+                "name": "Ag7PS6",
+                "space_group": 198,
+                "confidence": 37.0
+            },
+            {
+                "name": "AgPS3",
+                "space_group": 12,
+                "confidence": 30.5
+            },
+            {
+                "name": "Ag7P3S11",
+                "space_group": 15,
+                "confidence": 29.5
+            }
+        ]
+    },
+    {
+        "x_position": -11.0,
+        "y_position": -38.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 50.0
+            },
+            {
+                "name": "Ag4P2S7",
+                "space_group": 15,
+                "confidence": 43.0
+            }
+        ]
+    },
+    {
+        "x_position": -20.0,
+        "y_position": -38.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 50.0
+            },
+            {
+                "name": "Ag4P2S7",
+                "space_group": 15,
+                "confidence": 49.0
+            }
+        ]
+    },
+    {
+        "x_position": -29.0,
+        "y_position": -38.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 85.0
+            },
+            {
+                "name": "Ag3PS4",
+                "space_group": 31,
+                "confidence": 35.5
+            },
+            {
+                "name": "Ag4P2S7",
+                "space_group": 15,
+                "confidence": 24.5
+            },
+            {
+                "name": "Ag7PS6",
+                "space_group": 198,
+                "confidence": 12.0
+            }
+        ]
+    },
+    {
+        "x_position": -38.0,
+        "y_position": -38.0,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "phases": [
+            {
+                "name": "Ag3PS4",
+                "space_group": 31,
+                "confidence": 35.0
+            },
+            {
+                "name": "Ag4P2S7",
+                "space_group": 15,
+                "confidence": 27.5
+            },
+            {
+                "name": "AgPS3",
+                "space_group": 12,
+                "confidence": 24.0
+            },
+            {
+                "name": "Ag4P2S7",
+                "space_group": 152,
+                "confidence": 23.5
+            },
+            {
+                "name": "Ag56.008P24S88",
+                "space_group": 15,
+                "confidence": 20.0
+            }
+        ]
+    }
+]
