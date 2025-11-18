@@ -1,1 +1,0 @@
-import{a,co as u}from"./index-Db9INgJo.js";import{r as n}from"./material-react-table-DBlzLFj3.js";function l(){const t=a(),s=n.useCallback(o=>o.data.reduce((e,r)=>(e[r.name]=r,e),{}),[]);return u({queryKey:["north-tools"],staleTime:24*60*60*1e3,queryFn:()=>t?.get("north/"),select:s})}export{l as u};
