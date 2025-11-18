@@ -1,17 +1,22 @@
 keycloak:
   realm_name: fairdi_nomad_test
 
+services:
+  mode: development
+  # console_log_level: 30
+
+
 rfc3161_timestamp:
   server: http://timestamp.acs.microsoft.com
 
 plugins:
   exclude:
-    # - nomad_measurements.xrd:parser_entry_point  # For DTU Plugin testing
-    - nomad_measurements.transmission:parser_entry_point  # For IKZ plugin testing
+    - nomad_measurements.xrd:parser_entry_point  # For DTU Plugin testing
+    # - nomad_measurements.transmission:parser_entry_point  # For IKZ plugin testing
   entry_points:
     options:
       'nomad_measurements.xrd:schema_entry_point':
-        use_hdf5_results: true
+        use_hdf5_results: false
 
 temporal:
   enabled: true
