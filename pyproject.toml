@@ -8,6 +8,7 @@ requires-python = ">=3.12"
 license = { file = "LICENSE" }
 dependencies = [
   "nomad-lab[parsing, infrastructure]>=1.3.10",
+  "nomad-plugin-gui",
   # "nomad-material-processing",
   # "nomad-measurements",
   "nomad-analysis",
@@ -48,6 +49,8 @@ nomad-dtu-nanolab-plugin = { git = "https://github.com/DTU-Nanolab-materials-dis
 [tool.uv]
 extra-index-url = [
   "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple",
+  "https://gitlab.mpcdf.mpg.de/api/v4/projects/8647/packages/pypi/simple",
+
 ]
 dev-dependencies = [
   "nomad-lab[parsing, infrastructure, dev]>=1.3.4",
