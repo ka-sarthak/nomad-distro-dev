@@ -43,3 +43,9 @@
 [submodule "ui"]
 	path = ui
 	url = git@gitlab.mpcdf.mpg.de:nomad-lab/nomad-gui.git
+[submodule "packages/nomad-dtu-nanolab-plugin"]
+	path = packages/nomad-dtu-nanolab-plugin
+	url = https://github.com/DTU-Nanolab-materials-discovery/nomad-dtu-nanolab-plugin.git
+[submodule "packages/nomad-polymerization-reactions"]
+	path = packages/nomad-polymerization-reactions
+	url = git@github.com:FAIRmat-NFDI/nomad-polymerization-reactions.git

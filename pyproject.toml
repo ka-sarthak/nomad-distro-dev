@@ -25,7 +25,8 @@ dependencies = [
   # "basesection-migration",
   # "nomad-example",
   # "autoXRD",
-  ]
+  "nomad-polymerization-reactions",
+]
 
 [tool.uv.workspace]
 members = ["packages/*"]
@@ -45,7 +46,8 @@ nomad-crystallm = { workspace = true }
 basesection-migration = { workspace = true }
 nomad-example = { workspace = true }
 autoXRD = { workspace = true }
-nomad-dtu-nanolab-plugin = { git = "https://github.com/DTU-Nanolab-materials-discovery/nomad-dtu-nanolab-plugin.git", rev = "v0.4.5" }
+nomad-dtu-nanolab-plugin = { workspace = true }
+nomad-polymerization-reactions = { workspace = true }
 
 [tool.uv]
 extra-index-url = [
