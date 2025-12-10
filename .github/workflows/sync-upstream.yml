@@ -1,0 +1,67 @@
+name: Sync Upstream and Create PR
+
+on:
+  schedule:
+    - cron: '0 2 * * 1'  # Run weekly on Mondays at 2 AM UTC
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: false  # Skip submodules entirely
+          fetch-depth: 1     # Shallow fetch to avoid deep submodule history
+
+      - name: Add upstream remote (if not already present)
+        run: |
+          if ! git remote get-url upstream > /dev/null 2>&1; then
+            git remote add upstream https://github.com/FAIRmat-NFDI/nomad-distro-dev.git
+          fi
+          git fetch upstream
+
+      - name: Create or switch to sync branch
+        run: |
+          git checkout -b sync-upstream || git checkout sync-upstream
+          git merge --no-commit --no-ff origin/main || true  # Start with your main branch
+
+      - name: Merge upstream changes
+        run: |
+          git merge upstream/main --no-commit --no-ff || echo "Merge conflicts detected"
+
+      - name: Ignore submodule conflicts
+        run: |
+          # Reset submodule references to your version (ignore upstream submodule changes)
+          git checkout --ours .gitmodules || true
+          git checkout --ours packages/ || true
+          git add .gitmodules packages/ || true
+
+      - name: Complete merge if no other conflicts
+        run: |
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Merge upstream/main (excluding submodule changes)" || true
+          fi
+
+      - name: Push sync branch
+        run: |
+          git push origin sync-upstream --force
+
+      - name: Create or update PR
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: sync-upstream
+          base: main
+          title: "Sync upstream changes"
+          body: |
+            This PR syncs the latest changes from the upstream repository.
+
+            ## Changes
+            - Merged upstream commits into `sync-upstream` branch.
+
+            Please review and merge if appropriate.
+          delete-branch: false  # Keep the branch for future syncs
