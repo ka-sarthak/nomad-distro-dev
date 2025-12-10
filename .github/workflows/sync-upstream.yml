@@ -21,6 +21,7 @@ jobs:
             git remote add upstream https://github.com/FAIRmat-NFDI/nomad-distro-dev.git
           fi
           git fetch upstream
+          git remote set-url --push upstream no_push # Set push URL to avoid accidental pushes to upstream
 
       - name: Create or switch to sync branch
         run: |
