@@ -49,3 +49,6 @@
 [submodule "packages/nomad-polymerization-reactions"]
 	path = packages/nomad-polymerization-reactions
 	url = git@github.com:FAIRmat-NFDI/nomad-polymerization-reactions.git
+[submodule "packages/nomad-actions"]
+	path = packages/nomad-actions
+	url = git@github.com:FAIRmat-NFDI/nomad-actions.git
