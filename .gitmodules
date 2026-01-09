@@ -40,9 +40,6 @@
 [submodule "packages/XRD-AutoAnalyzer"]
 	path = packages/XRD-AutoAnalyzer
 	url = https://github.com/Pepe-Marquez/XRD-AutoAnalyzer.git
-[submodule "ui"]
-	path = ui
-	url = git@gitlab.mpcdf.mpg.de:nomad-lab/nomad-gui.git
 [submodule "packages/nomad-dtu-nanolab-plugin"]
 	path = packages/nomad-dtu-nanolab-plugin
 	url = https://github.com/DTU-Nanolab-materials-discovery/nomad-dtu-nanolab-plugin.git
