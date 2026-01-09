@@ -26,7 +26,7 @@ dependencies = [
   # "nomad-example",
   # "autoXRD",
   "nomad-polymerization-reactions",
-  "nomad-actions",
+  "nomad-actions[cpu-action]",
 ]
 
 [tool.uv.workspace]
