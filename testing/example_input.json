@@ -1,0 +1,49 @@
+{
+    "properties": {
+        "owner": {
+            "default": "visible",
+            "description": "Owner of the entries to be searched.",
+            "enum": [
+                "public",
+                "visible",
+                "shared",
+                "user",
+                "staging"
+            ],
+            "title": "Owner",
+            "type": "string"
+        },
+        "query": {
+            "description": "Query for extracting entries. Should be a valid dictionary\n        string. For example:\n\n        {\n\n        \t\"entry_type\": \"ELNSample\"\n\n        }\n",
+            "title": "Query",
+            "type": "string",
+            "ui:options": {
+                "rows": 5
+            },
+            "ui:widget": "textarea"
+        },
+        "required_include": {
+            "default": null,
+            "description": "List of fields to include in the search results. For example: results*, data.results*",
+            "items": {
+                "type": "string"
+            },
+            "title": "Required Include",
+            "type": "array"
+        },
+        "required_exclude": {
+            "default": null,
+            "description": "List of fields to exclude from the search results. For example: results.method.method_name",
+            "items": {
+                "type": "string"
+            },
+            "title": "Required Exclude",
+            "type": "array"
+        }
+    },
+    "required": [
+        "query"
+    ],
+    "title": "SearchSettings",
+    "type": "object"
+}

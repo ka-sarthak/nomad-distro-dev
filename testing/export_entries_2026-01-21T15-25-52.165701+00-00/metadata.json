@@ -1,0 +1,22 @@
+{
+    "num_entries": 913,
+    "search_start_time": "2026-01-21T15:25:52.165701+00:00",
+    "search_end_time": "2026-01-21T15:25:52.506418+00:00",
+    "user_input": {
+        "upload_id": "b33pKIzgRXyqruKzVJMi5A",
+        "user_id": "a02f4eb7-2243-4821-8abc-c87936b6da7b",
+        "search_settings": {
+            "owner": "visible",
+            "query": "{'entry_type': 'CatalyticReaction'}",
+            "required_include": [
+                "results.properties.catalytic.reaction.type"
+            ],
+            "required_exclude": []
+        },
+        "output_settings": {
+            "output_file_type": "json",
+            "batch_size": 1000,
+            "merge_output_files": true
+        }
+    }
+}

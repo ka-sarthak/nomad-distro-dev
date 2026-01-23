@@ -1,0 +1,22 @@
+definitions:
+  name: Test
+  sections:
+    TestSection:
+      base_sections:
+        - nomad.datamodel.metainfo.basesections.v1.BaseSection
+        - nomad.datamodel.data.EntryData
+      quantities:
+        test_quantity_1:
+          type: str
+          shape: ['*']
+          description: A test quantity 1
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+        test_quantity_2:
+          type: str
+          shape: ['*']
+          description: A test quantity 2
+          m_annotations:
+            eln:
+              component: StringEditQuantity
