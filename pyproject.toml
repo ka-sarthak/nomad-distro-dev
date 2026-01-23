@@ -26,7 +26,7 @@ dependencies = [
   # "nomad-example",
   # "autoXRD",
   "nomad-polymerization-reactions",
-  "nomad-actions[cpu-action]",
+  "nomad-ml-workflows[cpu-action]",
 ]
 
 [tool.uv.workspace]
@@ -49,7 +49,7 @@ nomad-example = { workspace = true }
 autoXRD = { workspace = true }
 nomad-dtu-nanolab-plugin = { workspace = true }
 nomad-polymerization-reactions = { workspace = true }
-nomad-actions = { workspace = true }
+nomad-ml-workflows = { workspace = true }
 
 [tool.uv]
 extra-index-url = [
