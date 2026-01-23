@@ -16,5 +16,7 @@
     },
     "[markdown]": {
           "editor.wordWrap": "bounded",
-    }
+    },
+    "github.copilot.chat.codesearch.enabled": true,
+    "github.copilot.chat.languageContext.typescript.enabled": true
 }
