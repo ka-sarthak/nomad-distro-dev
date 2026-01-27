@@ -15,7 +15,7 @@ dependencies = [
   "nomad-analysis",
   # "nomad-ikz-plugin",
   # "nomad-material-processing-example",
-  "nomad-auto-xrd[dev]",
+  # "nomad-auto-xrd[dev]",
   "nomad-dtu-nanolab-plugin",
   # "nomad-docs",
   # "crystallm",

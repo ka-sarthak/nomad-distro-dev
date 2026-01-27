@@ -17,9 +17,9 @@ plugins:
     options:
       nomad_measurements.xrd:schema_entry_point:
         use_hdf5_results: false
-      nomad_ml_workflows.actions:export_entries_action_entry_point:
+      nomad_ml_workflows.actions:export_entries:
         search_batch_timeout: 60  # in seconds
-        max_entries_export_limit: 4  # maximum number of entries to export; set to 0 for no limit
+        max_entries_export_limit: 10000  # maximum number of entries to export; set to 0 for no limit
 
 
 temporal:
