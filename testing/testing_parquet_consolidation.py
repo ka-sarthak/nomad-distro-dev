@@ -1,4 +1,4 @@
-from nomad_ml_workflows.actions.entries.utils import merge_files
+from nomad_ml_workflows.actions.export_entries.utils import merge_files
 
 
 def test_consolidate_parquet_files():
@@ -9,6 +9,7 @@ def test_consolidate_parquet_files():
     merge_files(
         input_file_paths=[file1, file2],
         output_file_path=output_file,
+        output_file_type="parquet",
     )
 
 

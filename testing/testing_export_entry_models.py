@@ -1,6 +1,6 @@
 import json
 
-from nomad_ml_workflows.actions.entries.models import (
+from nomad_ml_workflows.actions.export_entries.models import (
     ExportEntriesUserInput,
     SearchSettings,
 )
