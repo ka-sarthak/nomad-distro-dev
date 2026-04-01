@@ -3,6 +3,7 @@ keycloak:
 
 services:
   mode: development
+  admin_user_id: a02f4eb7-2243-4821-8abc-c87936b6da7b
   # console_log_level: 30
 
 
@@ -11,7 +12,7 @@ rfc3161_timestamp:
 
 plugins:
   exclude:
-    - nomad_measurements.xrd:parser_entry_point  # For DTU Plugin testing
+    # - nomad_measurements.xrd:parser_entry_point  # For DTU Plugin testing
     # - nomad_measurements.transmission:parser_entry_point  # For IKZ plugin testing
   entry_points:
     options:
