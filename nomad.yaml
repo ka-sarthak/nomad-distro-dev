@@ -3,7 +3,7 @@ keycloak:
 
 services:
   mode: development
-  admin_user_id: a02f4eb7-2243-4821-8abc-c87936b6da7b
+  admin_user_id: be691000-501a-462a-99b2-873aa11fbe1e
   # console_log_level: 30
 
 
