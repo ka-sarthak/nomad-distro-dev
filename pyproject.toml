@@ -54,6 +54,7 @@ autoXRD = { workspace = true }
 nomad-dtu-nanolab-plugin = { workspace = true }
 nomad-polymerization-reactions = { workspace = true }
 nomad-ml-workflows = { workspace = true }
+nomad-gui = { workspace = true }
 # nomad-gui = { index = "nomad-gui" }
 
 [tool.uv]
