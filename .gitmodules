@@ -49,9 +49,6 @@
 [submodule "packages/nomad-ml-workflows"]
 	path = packages/nomad-ml-workflows
 	url = git@github.com:FAIRmat-NFDI/nomad-ml-workflows.git
-[submodule "packages/nomad-gui"]
-	path = ui/
-	url = git@gitlab.mpcdf.mpg.de:nomad-lab/nomad-gui.git
 [submodule "ui"]
 	path = ui
 	url = git@gitlab.mpcdf.mpg.de:nomad-lab/nomad-gui.git
