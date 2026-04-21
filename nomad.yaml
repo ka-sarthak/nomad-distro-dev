@@ -1,10 +1,16 @@
 keycloak:
   realm_name: fairdi_nomad_test
 
+north:
+  # hub_connect_ip: host.docker.internal
+  jupyterhub_crypt_key: d924ab39099e961601ca0b70da1cf524c38c512f1b05392c57537d3794d8e512
+  hub_connect_url: "http://172.17.0.1:8081"  # on my machine it's "172.17.0.1"
+
 services:
   mode: development
   admin_user_id: be691000-501a-462a-99b2-873aa11fbe1e
   # console_log_level: 30
+  upload_limit: 1000
 
 
 rfc3161_timestamp:
