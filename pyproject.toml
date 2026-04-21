@@ -27,6 +27,7 @@ dependencies = [
   # "autoXRD",
   "nomad-polymerization-reactions",
   "nomad-ml-workflows[cpu-action]",
+  "nomad-north-jupyter",
 ]
 
 [tool.uv.workspace]
@@ -118,6 +119,7 @@ cmd = "ruff format . --check"
 [tool.poe.tasks.hub]
 cmd = "nomad admin run hub"
 cwd = "packages/nomad-FAIR"
+env = { NOMAD_CONFIG = "../../nomad.yaml" }
 
 [tool.poe.tasks.gui]
 cmd = "yarn run"
