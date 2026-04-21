@@ -30,25 +30,46 @@ def get_entries(
     return response.json()
 
 
-username = "anatitzhak"
-password = "Gaushle05369"
-url = "http://nomad.nanolab.dtu.dk/nomad-oasis/api/v1"
+# username = "anatitzhak"
+# password = "Gaushle05369"
+# url = "http://nomad.nanolab.dtu.dk/nomad-oasis/api/v1"
 
-query = {
-    "owner": "visible",
-    "query": {
-        "and": [
-            {"entry_type:all": ["DTUSputtering"]},
-        ]
-    },
-    "pagination": {
-        "page_size": 10,
-    },
-    "required": {
-        "data": "*",
-    },
-}
-entries = get_entries(query, url, username, password)
-print(f"Found {len(entries['data'])} entries.")
-with open("entries.json", "w") as f:
-    json.dump(entries["data"], f, indent=2)
+# query = {
+#     "owner": "visible",
+#     "query": {
+#         "and": [
+#             {"entry_type:all": ["DTUSputtering"]},
+#         ]
+#     },
+#     "pagination": {
+#         "page_size": 10,
+#     },
+#     "required": {
+#         "data": "*",
+#     },
+# }
+# entries = get_entries(query, url, username, password)
+# print(f"Found {len(entries['data'])} entries.")
+# with open("entries.json", "w") as f:
+#     json.dump(entries["data"], f, indent=2)
+
+
+if __name__ == "__main__":
+    import asyncio
+
+    # NOMAD Analysis Metadata - DO NOT EDIT
+    NOMAD_ANALYSIS_ENTRY_ID = "hY5Hw09eQUWnEP1GvtOj8tcS1pl1"
+    NOMAD_ANALYSIS_BASE_URL = "http://localhost:3000/nomad-oasis/api/v1"
+
+    from nomad_analysis.utils import get_entry_data
+
+    async def main():
+        analysis = await get_entry_data(
+            entry_id=NOMAD_ANALYSIS_ENTRY_ID,
+            url=NOMAD_ANALYSIS_BASE_URL,
+            username="sarthakdevelop",
+            password="1nH@rmony01",
+        )
+        return analysis
+
+    analysis = asyncio.run(main())
