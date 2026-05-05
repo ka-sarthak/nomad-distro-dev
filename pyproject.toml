@@ -23,7 +23,6 @@ dependencies = [
   "nomad-crystallm[cpu-action]",
   "scipy==1.15.3", # pinning scipy to avoid issues with statsmodels
   # "basesection-migration",
-  # "nomad-example",
   # "autoXRD",
   "nomad-polymerization-reactions",
   "nomad-ml-workflows[cpu-action]",
@@ -50,7 +49,6 @@ crystallm = { workspace = true }
 pdi-nomad-plugin = { workspace = true }
 nomad-crystallm = { workspace = true }
 basesection-migration = { workspace = true }
-nomad-example = { workspace = true }
 autoXRD = { workspace = true }
 nomad-dtu-nanolab-plugin = { workspace = true }
 nomad-polymerization-reactions = { workspace = true }
