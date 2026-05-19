@@ -29,6 +29,7 @@ dependencies = [
   "nomad-north-jupyter",
   "ipykernel>=7.2.0",
   "llvmlite>=0.40.0",
+  "nomad-agentic-actions",
 ]
 
 [tool.uv.workspace]
@@ -49,11 +50,11 @@ nomad-docs = { workspace = true }
 pdi-nomad-plugin = { workspace = true }
 nomad-crystallm = { workspace = true }
 basesection-migration = { workspace = true }
-autoXRD = { workspace = true }
 nomad-dtu-nanolab-plugin = { workspace = true }
 nomad-polymerization-reactions = { workspace = true }
 nomad-ml-workflows = { workspace = true }
 nomad-gui = { workspace = true }
+nomad-agentic-actions = { workspace = true }
 # nomad-gui = { index = "nomad-gui" }
 
 [tool.uv]
