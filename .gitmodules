@@ -37,3 +37,6 @@
 [submodule "ui"]
 	path = ui
 	url = git@gitlab.mpcdf.mpg.de:nomad-lab/nomad-gui.git
+[submodule "packages/nomad-agentic-actions"]
+	path = packages/nomad-agentic-actions
+	url = git@github.com:FAIRmat-NFDI/nomad-agentic-actions.git
