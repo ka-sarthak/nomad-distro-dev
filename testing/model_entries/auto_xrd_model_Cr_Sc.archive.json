@@ -1,0 +1,37 @@
+{
+    "data": {
+        "m_def": "nomad_auto_xrd.schema_packages.schema.AutoXRDModel",
+        "name": "auto_xrd_model_Cr_Sc",
+        "includes_pdf": true,
+        "simulation_settings": {
+            "min_angle": 14,
+            "max_angle": 64,
+            "max_texture": 0.6,
+            "min_domain_size": 5,
+            "max_domain_size": 40,
+            "max_strain": 0.01,
+            "num_patterns": 150,
+            "max_shift": 0.2
+        },
+        "training_settings": {
+            "num_epochs": 50,
+            "learning_rate": 0.001,
+            "batch_size": 256,
+            "test_fraction": 0.1
+        },
+        "evaluation_metrics": {
+            "accuracy": 0.6809737580076637
+        },
+        "training_metrics": {
+            "accuracy": 0.9568040822677824
+        }
+    },
+    "results": {
+        "material": {
+            "elements": [
+                "Cr",
+                "Sc"
+            ]
+        }
+    }
+}

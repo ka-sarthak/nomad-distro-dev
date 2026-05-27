@@ -1,0 +1,39 @@
+{
+    "data": {
+        "m_def": "nomad_auto_xrd.schema_packages.schema.AutoXRDModel",
+        "name": "auto_xrd_model_Zn_P_V_Co",
+        "includes_pdf": true,
+        "simulation_settings": {
+            "min_angle": 10,
+            "max_angle": 63,
+            "max_texture": 0.9,
+            "min_domain_size": 3,
+            "max_domain_size": 10,
+            "max_strain": 0.01,
+            "num_patterns": 200,
+            "max_shift": 0.5
+        },
+        "training_settings": {
+            "num_epochs": 20,
+            "learning_rate": 0.1,
+            "batch_size": 128,
+            "test_fraction": 0.1
+        },
+        "evaluation_metrics": {
+            "accuracy": 0.7964776873255739
+        },
+        "training_metrics": {
+            "accuracy": 0.8890778438288539
+        }
+    },
+    "results": {
+        "material": {
+            "elements": [
+                "Zn",
+                "P",
+                "V",
+                "Co"
+            ]
+        }
+    }
+}

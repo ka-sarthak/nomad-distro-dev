@@ -1,0 +1,39 @@
+{
+    "data": {
+        "m_def": "nomad_auto_xrd.schema_packages.schema.AutoXRDModel",
+        "name": "auto_xrd_model_F_Al_B_N",
+        "includes_pdf": false,
+        "simulation_settings": {
+            "min_angle": 14,
+            "max_angle": 63,
+            "max_texture": 0.6,
+            "min_domain_size": 7,
+            "max_domain_size": 40,
+            "max_strain": 0.02,
+            "num_patterns": 50,
+            "max_shift": 0.3
+        },
+        "training_settings": {
+            "num_epochs": 100,
+            "learning_rate": 0.5,
+            "batch_size": 32,
+            "test_fraction": 0.2
+        },
+        "evaluation_metrics": {
+            "accuracy": 0.5306868018758206
+        },
+        "training_metrics": {
+            "accuracy": 0.9626516305994753
+        }
+    },
+    "results": {
+        "material": {
+            "elements": [
+                "F",
+                "Al",
+                "B",
+                "N"
+            ]
+        }
+    }
+}

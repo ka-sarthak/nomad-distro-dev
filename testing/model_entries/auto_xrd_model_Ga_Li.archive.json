@@ -1,0 +1,37 @@
+{
+    "data": {
+        "m_def": "nomad_auto_xrd.schema_packages.schema.AutoXRDModel",
+        "name": "auto_xrd_model_Ga_Li",
+        "includes_pdf": true,
+        "simulation_settings": {
+            "min_angle": 13,
+            "max_angle": 80,
+            "max_texture": 0.6,
+            "min_domain_size": 8,
+            "max_domain_size": 50,
+            "max_strain": 0.05,
+            "num_patterns": 200,
+            "max_shift": 0.1
+        },
+        "training_settings": {
+            "num_epochs": 10,
+            "learning_rate": 0.001,
+            "batch_size": 128,
+            "test_fraction": 0.3
+        },
+        "evaluation_metrics": {
+            "accuracy": 0.6708570505838821
+        },
+        "training_metrics": {
+            "accuracy": 0.8312344851015464
+        }
+    },
+    "results": {
+        "material": {
+            "elements": [
+                "Ga",
+                "Li"
+            ]
+        }
+    }
+}

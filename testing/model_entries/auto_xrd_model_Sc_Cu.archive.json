@@ -1,0 +1,37 @@
+{
+    "data": {
+        "m_def": "nomad_auto_xrd.schema_packages.schema.AutoXRDModel",
+        "name": "auto_xrd_model_Sc_Cu",
+        "includes_pdf": false,
+        "simulation_settings": {
+            "min_angle": 20,
+            "max_angle": 60,
+            "max_texture": 0.5,
+            "min_domain_size": 5,
+            "max_domain_size": 20,
+            "max_strain": 0.01,
+            "num_patterns": 200,
+            "max_shift": 0.3
+        },
+        "training_settings": {
+            "num_epochs": 100,
+            "learning_rate": 0.01,
+            "batch_size": 256,
+            "test_fraction": 0.3
+        },
+        "evaluation_metrics": {
+            "accuracy": 0.7117228661042979
+        },
+        "training_metrics": {
+            "accuracy": 0.9148905431826881
+        }
+    },
+    "results": {
+        "material": {
+            "elements": [
+                "Sc",
+                "Cu"
+            ]
+        }
+    }
+}

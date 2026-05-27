@@ -1,0 +1,38 @@
+{
+    "data": {
+        "m_def": "nomad_auto_xrd.schema_packages.schema.AutoXRDModel",
+        "name": "auto_xrd_model_Ti_B_Sc",
+        "includes_pdf": false,
+        "simulation_settings": {
+            "min_angle": 40,
+            "max_angle": 76,
+            "max_texture": 0.9,
+            "min_domain_size": 3,
+            "max_domain_size": 40,
+            "max_strain": 0.03,
+            "num_patterns": 100,
+            "max_shift": 0.4
+        },
+        "training_settings": {
+            "num_epochs": 10,
+            "learning_rate": 0.1,
+            "batch_size": 64,
+            "test_fraction": 0.3
+        },
+        "evaluation_metrics": {
+            "accuracy": 0.9261693560401767
+        },
+        "training_metrics": {
+            "accuracy": 0.9506261875888274
+        }
+    },
+    "results": {
+        "material": {
+            "elements": [
+                "Ti",
+                "B",
+                "Sc"
+            ]
+        }
+    }
+}

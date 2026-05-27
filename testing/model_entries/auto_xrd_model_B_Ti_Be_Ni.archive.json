@@ -1,0 +1,39 @@
+{
+    "data": {
+        "m_def": "nomad_auto_xrd.schema_packages.schema.AutoXRDModel",
+        "name": "auto_xrd_model_B_Ti_Be_Ni",
+        "includes_pdf": true,
+        "simulation_settings": {
+            "min_angle": 14,
+            "max_angle": 76,
+            "max_texture": 0.8,
+            "min_domain_size": 3,
+            "max_domain_size": 40,
+            "max_strain": 0.05,
+            "num_patterns": 150,
+            "max_shift": 0.2
+        },
+        "training_settings": {
+            "num_epochs": 5,
+            "learning_rate": 0.5,
+            "batch_size": 256,
+            "test_fraction": 0.3
+        },
+        "evaluation_metrics": {
+            "accuracy": 0.971860505487834
+        },
+        "training_metrics": {
+            "accuracy": 0.8105909064810014
+        }
+    },
+    "results": {
+        "material": {
+            "elements": [
+                "B",
+                "Ti",
+                "Be",
+                "Ni"
+            ]
+        }
+    }
+}

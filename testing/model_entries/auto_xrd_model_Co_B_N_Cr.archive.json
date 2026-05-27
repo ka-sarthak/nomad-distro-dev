@@ -1,0 +1,39 @@
+{
+    "data": {
+        "m_def": "nomad_auto_xrd.schema_packages.schema.AutoXRDModel",
+        "name": "auto_xrd_model_Co_B_N_Cr",
+        "includes_pdf": false,
+        "simulation_settings": {
+            "min_angle": 20,
+            "max_angle": 63,
+            "max_texture": 0.6,
+            "min_domain_size": 7,
+            "max_domain_size": 30,
+            "max_strain": 0.04,
+            "num_patterns": 100,
+            "max_shift": 0.1
+        },
+        "training_settings": {
+            "num_epochs": 5,
+            "learning_rate": 0.2,
+            "batch_size": 64,
+            "test_fraction": 0.5
+        },
+        "evaluation_metrics": {
+            "accuracy": 0.9719929486879875
+        },
+        "training_metrics": {
+            "accuracy": 0.92688654347143
+        }
+    },
+    "results": {
+        "material": {
+            "elements": [
+                "Co",
+                "B",
+                "N",
+                "Cr"
+            ]
+        }
+    }
+}

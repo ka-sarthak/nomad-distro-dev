@@ -1,0 +1,38 @@
+{
+    "data": {
+        "m_def": "nomad_auto_xrd.schema_packages.schema.AutoXRDModel",
+        "name": "auto_xrd_model_N_Cr_H",
+        "includes_pdf": true,
+        "simulation_settings": {
+            "min_angle": 14,
+            "max_angle": 80,
+            "max_texture": 0.6,
+            "min_domain_size": 7,
+            "max_domain_size": 10,
+            "max_strain": 0.04,
+            "num_patterns": 100,
+            "max_shift": 0.3
+        },
+        "training_settings": {
+            "num_epochs": 50,
+            "learning_rate": 0.01,
+            "batch_size": 64,
+            "test_fraction": 0.3
+        },
+        "evaluation_metrics": {
+            "accuracy": 0.6077087526744558
+        },
+        "training_metrics": {
+            "accuracy": 0.8755258951694387
+        }
+    },
+    "results": {
+        "material": {
+            "elements": [
+                "N",
+                "Cr",
+                "H"
+            ]
+        }
+    }
+}

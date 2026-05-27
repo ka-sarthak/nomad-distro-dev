@@ -1,0 +1,38 @@
+{
+    "data": {
+        "m_def": "nomad_auto_xrd.schema_packages.schema.AutoXRDModel",
+        "name": "auto_xrd_model_Zn_O_C",
+        "includes_pdf": false,
+        "simulation_settings": {
+            "min_angle": 14,
+            "max_angle": 76,
+            "max_texture": 0.7,
+            "min_domain_size": 5,
+            "max_domain_size": 30,
+            "max_strain": 0.02,
+            "num_patterns": 200,
+            "max_shift": 0.4
+        },
+        "training_settings": {
+            "num_epochs": 30,
+            "learning_rate": 0.01,
+            "batch_size": 64,
+            "test_fraction": 0.2
+        },
+        "evaluation_metrics": {
+            "accuracy": 0.6881542688598703
+        },
+        "training_metrics": {
+            "accuracy": 0.8881157494801994
+        }
+    },
+    "results": {
+        "material": {
+            "elements": [
+                "Zn",
+                "O",
+                "C"
+            ]
+        }
+    }
+}
