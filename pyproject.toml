@@ -8,7 +8,7 @@ requires-python = ">=3.12"
 license = { file = "LICENSE" }
 dependencies = [
   "nomad-lab[infrastructure]>=1.3.10",
-#   "nomad-gui",
+  "nomad-gui",
   # "nomad-material-processing",
   "nomad-measurements",
   # "nomad-measurements[nexus]",
@@ -37,8 +37,7 @@ dependencies = [
 [tool.uv.workspace]
 members = [
     "packages/*",
-    # "packages/nomad-gui/infra",
-    # "ui/infra",
+    "ui/infra",
 ]
 
 [tool.uv.sources]
@@ -55,8 +54,9 @@ basesection-migration = { workspace = true }
 nomad-dtu-nanolab-plugin = { workspace = true }
 nomad-polymerization-reactions = { workspace = true }
 nomad-ml-workflows = { workspace = true }
-# nomad-gui = { workspace = true }
+nomad-gui = { workspace = true }
 nomad-parser-tutorial-exercise = { workspace = true }
+nomad-agentic-actions = { workspace = true }
 # nomad-gui = { index = "nomad-gui" }
 
 [tool.uv]
