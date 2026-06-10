@@ -55,8 +55,8 @@ nomad-dtu-nanolab-plugin = { workspace = true }
 nomad-polymerization-reactions = { workspace = true }
 nomad-ml-workflows = { workspace = true }
 nomad-gui = { workspace = true }
-nomad-plugin-tutorial = { workspace = true }
 nomad-agentic-actions = { workspace = true }
+nomad-plugin-tutorial = { workspace = true }
 # nomad-gui = { index = "nomad-gui" }
 
 [tool.uv]

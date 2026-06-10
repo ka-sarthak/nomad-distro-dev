@@ -40,3 +40,6 @@
 [submodule "packages/nomad-agentic-actions"]
 	path = packages/nomad-agentic-actions
 	url = git@github.com:FAIRmat-NFDI/nomad-agentic-actions.git
+[submodule "packages/nomad-plugin-tutorials"]
+	path = packages/nomad-plugin-tutorials
+	url = git@github.com:FAIRmat-NFDI/nomad-plugin-tutorials.git
