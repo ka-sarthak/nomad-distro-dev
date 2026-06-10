@@ -31,7 +31,7 @@ dependencies = [
   "llvmlite>=0.40.0",
   "nomad-agentic-actions",
   "perovskite-solar-cell-database>=1.0.0",
-  "nomad-parser-tutorial-exercise",
+  "nomad-plugin-tutorial",
 ]
 
 [tool.uv.workspace]
@@ -55,7 +55,7 @@ nomad-dtu-nanolab-plugin = { workspace = true }
 nomad-polymerization-reactions = { workspace = true }
 nomad-ml-workflows = { workspace = true }
 nomad-gui = { workspace = true }
-nomad-parser-tutorial-exercise = { workspace = true }
+nomad-plugin-tutorial = { workspace = true }
 nomad-agentic-actions = { workspace = true }
 # nomad-gui = { index = "nomad-gui" }
 
