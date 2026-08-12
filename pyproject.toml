@@ -25,14 +25,16 @@ dependencies = [
   # "basesection-migration",
   # "autoXRD",
   "nomad-polymerization-reactions",
-  "nomad-ml-workflows[cpu-action]",
+  "nomad-ml-workflows",
   #   "nomad-north-jupyter",
   "ipykernel>=7.2.0",
   "llvmlite>=0.40.0",
-  "nomad-agentic-actions",
+  # "nomad-agentic-actions",
   "perovskite-solar-cell-database>=1.0.0",
   "nomad-plugin-tutorial",
-  "marimo>=0.21.1",
+  # "marimo>=0.21.1",
+  "nomad-catalysis>=1.0.6",
+  "nomad-simulations",
 ]
 
 [tool.uv.workspace]
@@ -57,6 +59,7 @@ nomad-polymerization-reactions = { workspace = true }
 nomad-ml-workflows = { workspace = true }
 nomad-gui = { workspace = true }
 nomad-plugin-tutorial = { workspace = true }
+nomad-simulations = { workspace = true }
 # nomad-gui = { index = "nomad-gui" }
 
 [tool.uv]
