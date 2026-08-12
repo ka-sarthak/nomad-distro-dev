@@ -48,7 +48,6 @@ nomad-lab = { workspace = true }
 nomad-material-processing = { workspace = true }
 nomad-measurements = { workspace = true }
 nomad-analysis = { workspace = true }
-nomad-ikz-plugin = { workspace = true }
 nomad-auto-xrd = { workspace = true }
 nomad-docs = { workspace = true }
 pdi-nomad-plugin = { workspace = true }
