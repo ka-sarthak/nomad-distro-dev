@@ -168,6 +168,18 @@
       "args": ["-svx", "tests"]
     },
     {
+      "name": "nomad-polymerization-reactions tests",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/packages/nomad-polymerization-reactions/",
+      "program": "${workspaceFolder}/.venv/bin/pytest",
+      "justMyCode": false,
+      "env": {
+        "_PYTEST_RAISE": "1"
+      },
+      "args": ["-svx", "tests/test_schemas.py"]
+    },
+    {
       "name": "nomad parse",
       "type": "python",
       "request": "launch",
