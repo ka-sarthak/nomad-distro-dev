@@ -1,0 +1,235 @@
+[
+  {
+    "label": "gui",
+    "adapter": "JavaScript",
+    "type": "chrome",
+    "request": "launch",
+    "url": "http://localhost:3000",
+    "webRoot": "$ZED_WORKTREE_ROOT/packages/nomad-FAIR/gui"
+  },
+  {
+    "label": "app",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "python": "$ZED_CUSTOM_PYTHON_ACTIVE_ZED_TOOLCHAIN",
+    "justMyCode": false,
+    "program": "$ZED_WORKTREE_ROOT/.venv/bin/nomad",
+    "args": ["admin", "run", "app"]
+  },
+  {
+    "label": "test entry api",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "python": "$ZED_CUSTOM_PYTHON_ACTIVE_ZED_TOOLCHAIN",
+    "justMyCode": false,
+    "program": "$ZED_WORKTREE_ROOT/read_binary.py"
+  },
+  {
+    "label": "appworker",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "python": "$ZED_CUSTOM_PYTHON_ACTIVE_ZED_TOOLCHAIN",
+    "justMyCode": false,
+    "program": "$ZED_WORKTREE_ROOT/.venv/bin/nomad",
+    "args": ["admin", "run", "appworker", "--dev"]
+  },
+  {
+    "label": "action cpu worker",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "python": "$ZED_CUSTOM_PYTHON_ACTIVE_ZED_TOOLCHAIN",
+    "justMyCode": false,
+    "program": "$ZED_WORKTREE_ROOT/.venv/bin/nomad",
+    "args": ["admin", "run", "action-cpu-worker"]
+  },
+  {
+    "label": "hub",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "python": "$ZED_CUSTOM_PYTHON_ACTIVE_ZED_TOOLCHAIN",
+    "justMyCode": false,
+    "program": "$ZED_WORKTREE_ROOT/.venv/bin/nomad",
+    "args": ["admin", "run", "hub"]
+  },
+  {
+    "label": "nomad lab tests",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "python": "$ZED_CUSTOM_PYTHON_ACTIVE_ZED_TOOLCHAIN",
+    "cwd": "$ZED_WORKTREE_ROOT/packages/nomad-FAIR",
+    "program": "$ZED_WORKTREE_ROOT/.venv/bin/pytest",
+    "justMyCode": false,
+    "env": {
+      "_PYTEST_RAISE": "1"
+    },
+    "args": ["-sv", "tests"]
+  },
+  {
+    "label": "nomad measurements tests",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "python": "$ZED_CUSTOM_PYTHON_ACTIVE_ZED_TOOLCHAIN",
+    "cwd": "$ZED_WORKTREE_ROOT/packages/nomad-measurements/",
+    "program": "$ZED_WORKTREE_ROOT/.venv/bin/pytest",
+    "justMyCode": false,
+    "env": {
+      "_PYTEST_RAISE": "1"
+    },
+    "args": ["-svx", "tests/test_xrd.py"]
+  },
+  {
+    "label": "nomad material processing tests",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "python": "$ZED_CUSTOM_PYTHON_ACTIVE_ZED_TOOLCHAIN",
+    "cwd": "$ZED_WORKTREE_ROOT/packages/nomad-material-processing/",
+    "program": "$ZED_WORKTREE_ROOT/.venv/bin/pytest",
+    "justMyCode": false,
+    "env": {
+      "_PYTEST_RAISE": "1"
+    },
+    "args": ["-svx", "tests"]
+  },
+  {
+    "label": "nomad crystallm",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "python": "$ZED_CUSTOM_PYTHON_ACTIVE_ZED_TOOLCHAIN",
+    "cwd": "$ZED_WORKTREE_ROOT/packages/nomad-crystallm/",
+    "program": "$ZED_WORKTREE_ROOT/.venv/bin/pytest",
+    "justMyCode": false,
+    "env": {
+      "_PYTEST_RAISE": "1"
+    },
+    "args": ["-svx", "tests"]
+  },
+  {
+    "label": "demo temporal tests",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "python": "$ZED_CUSTOM_PYTHON_ACTIVE_ZED_TOOLCHAIN",
+    "cwd": "$ZED_WORKTREE_ROOT/packages/demo-temporal/",
+    "program": "$ZED_WORKTREE_ROOT/.venv/bin/pytest",
+    "justMyCode": false,
+    "env": {
+      "_PYTEST_RAISE": "1"
+    },
+    "args": ["-svx"]
+  },
+  {
+    "label": "nomad auto xrd training",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "python": "$ZED_CUSTOM_PYTHON_ACTIVE_ZED_TOOLCHAIN",
+    "cwd": "$ZED_WORKTREE_ROOT/packages/nomad-auto-xrd/",
+    "program": "$ZED_WORKTREE_ROOT/.venv/bin/pytest",
+    "justMyCode": false,
+    "env": {
+      "_PYTEST_RAISE": "1"
+    },
+    "args": ["-svx", "tests/test_training.py"]
+  },
+  {
+    "label": "nomad auto xrd analysis",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "python": "$ZED_CUSTOM_PYTHON_ACTIVE_ZED_TOOLCHAIN",
+    "cwd": "$ZED_WORKTREE_ROOT/packages/nomad-auto-xrd/",
+    "program": "$ZED_WORKTREE_ROOT/.venv/bin/pytest",
+    "justMyCode": false,
+    "env": {
+      "_PYTEST_RAISE": "1"
+    },
+    "args": ["-svx", "tests/test_analysis.py"]
+  },
+  {
+    "label": "nomad auto xrd schemas",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "python": "$ZED_CUSTOM_PYTHON_ACTIVE_ZED_TOOLCHAIN",
+    "cwd": "$ZED_WORKTREE_ROOT/packages/nomad-auto-xrd/",
+    "program": "$ZED_WORKTREE_ROOT/.venv/bin/pytest",
+    "justMyCode": false,
+    "env": {
+      "_PYTEST_RAISE": "1"
+    },
+    "args": ["-svx", "tests/test_schemas.py"]
+  },
+  {
+    "label": "nomad analysis tests",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "python": "$ZED_CUSTOM_PYTHON_ACTIVE_ZED_TOOLCHAIN",
+    "cwd": "$ZED_WORKTREE_ROOT/packages/nomad-analysis/",
+    "program": "$ZED_WORKTREE_ROOT/.venv/bin/pytest",
+    "justMyCode": false,
+    "env": {
+      "_PYTEST_RAISE": "1"
+    },
+    "args": ["-svx", "tests"]
+  },
+  {
+    "label": "nomad-ikz-plugin tests",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "python": "$ZED_CUSTOM_PYTHON_ACTIVE_ZED_TOOLCHAIN",
+    "cwd": "$ZED_WORKTREE_ROOT/packages/nomad-ikz-plugin/",
+    "program": "$ZED_WORKTREE_ROOT/.venv/bin/pytest",
+    "justMyCode": false,
+    "env": {
+      "_PYTEST_RAISE": "1"
+    },
+    "args": ["-svx", "tests"]
+  },
+  {
+    "label": "nomad-polymerization-reactions tests",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "python": "$ZED_CUSTOM_PYTHON_ACTIVE_ZED_TOOLCHAIN",
+    "cwd": "$ZED_WORKTREE_ROOT/packages/nomad-polymerization-reactions/",
+    "program": "$ZED_WORKTREE_ROOT/.venv/bin/pytest",
+    "justMyCode": false,
+    "env": {
+      "_PYTEST_RAISE": "1"
+    },
+    "args": ["-svx", "tests/test_schemas.py"]
+  },
+  {
+    "label": "nomad parse",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "python": "$ZED_CUSTOM_PYTHON_ACTIVE_ZED_TOOLCHAIN",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "program": "$ZED_WORKTREE_ROOT/.venv/bin/nomad",
+    "justMyCode": false,
+    "args": [
+      "parse",
+      "--show-archive",
+      "packages/nomad-FAIR/tests/data/parsers/vasp/vasp.xml"
+    ]
+  },
+  {
+    "label": "Python: Current File",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "python": "$ZED_CUSTOM_PYTHON_ACTIVE_ZED_TOOLCHAIN",
+    "program": "$ZED_FILE"
+  },
+  {
+    "label": "Python: Attach",
+    "adapter": "Debugpy",
+    "request": "attach",
+    "python": "$ZED_CUSTOM_PYTHON_ACTIVE_ZED_TOOLCHAIN",
+    "connect": {
+      "host": "localhost",
+      "port": 3000
+    },
+    "pathMappings": [
+      {
+        "localRoot": "$ZED_WORKTREE_ROOT",
+        "remoteRoot": "$ZED_WORKTREE_ROOT"
+      }
+    ],
+    "secret": "my_secret"
+  }
+]
