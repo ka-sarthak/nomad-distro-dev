@@ -1,0 +1,20 @@
+{
+  "extraPaths": [
+    "packages/nomad-FAIR",
+    "packages/nomad-analysis/src",
+    "packages/nomad-measurements/src",
+    "packages/nomad-auto-xrd/src",
+    "packages/nomad-material-processing/src",
+    "packages/nomad-ml-workflows/src",
+    "packages/nomad-polymerization-reactions/src",
+    "packages/nomad-dtu-nanolab-plugin/src",
+    "packages/pdi-nomad-plugin/src"
+  ],
+  "typeCheckingMode": "basic",
+  "reportMissingImports": "none",
+  "reportMissingModuleSource": "none",
+  "reportUnknownMemberType": "none",
+  "reportUnknownVariableType": "none",
+  "reportUnknownArgumentType": "none",
+  "reportOptionalMemberAccess": "none"
+}
