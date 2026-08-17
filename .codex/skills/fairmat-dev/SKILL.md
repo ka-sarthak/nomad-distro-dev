@@ -11,6 +11,7 @@ Use this skill for changes in this repository when repo-specific structure or wo
 
 - Changes under `packages/*`, `ui/`, `scripts/`, or root project configuration
 - Work involving NOMAD plugins, actions, parsers, package wiring, or local development tasks
+- Work involving NOMAD metainfo traversal, serialized archive flattening, or Parquet export behavior
 - Requests that need repo-specific validation commands instead of generic Python advice
 
 ## Workflow
@@ -25,3 +26,4 @@ Use this skill for changes in this repository when repo-specific structure or wo
 
 - Read `references/repo-layout.md` for the workspace structure and common edit boundaries.
 - Read `references/testing.md` before choosing validation commands for a change.
+- Read `references/nomad-metainfo-traversal.md` when working on NOMAD metainfo traversal, `m_def` resolution, or archive-to-tabular export logic.

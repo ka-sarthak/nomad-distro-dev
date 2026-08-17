@@ -13,6 +13,10 @@
 - `uv run poe cpuworker`: action worker validation for CPU-backed action flows
 - `uv run poe gui` or package-local UI commands: frontend validation when changes affect UI behavior
 
+If running `uv` requires access that violates the sandbox, activate the existing
+virtual environment `.venv` in the root directory, and then run the commands
+without `uv`.
+
 ## Notes
 
 - Prefer package-scoped test paths over full-suite runs unless the task requires broader regression coverage.
