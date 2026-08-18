@@ -17,10 +17,11 @@ Use this skill for changes in this repository when repo-specific structure or wo
 ## Workflow
 
 1. Read `AGENTS.md` at the repo root, then follow any deeper `AGENTS.md` files in the touched subtree.
-2. Inspect the affected package or app before editing shared code.
-3. Prefer existing root Poe tasks and `uv` workspace commands over ad hoc alternatives.
-4. Keep changes scoped to the touched package unless a cross-package change is necessary.
-5. Run the narrowest validation that covers the behavior you changed.
+2. For work in a plugin submodule, check for `.codex/ARCHITECTURE.md` under that submodule and read it before investigating or editing.
+3. Inspect the affected package or app before editing shared code.
+4. Prefer existing root Poe tasks and `uv` workspace commands over ad hoc alternatives.
+5. Keep changes scoped to the touched package unless a cross-package change is necessary.
+6. Run the narrowest validation that covers the behavior you changed.
 
 ## References
 
