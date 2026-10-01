@@ -22,7 +22,7 @@ dependencies = [
   "pdi-nomad-plugin",
   "nomad-crystallm[cpu-action]",
   "scipy==1.15.3", # pinning scipy to avoid issues with statsmodels
-  # "basesection-migration",
+  "basesection-migration",
   # "autoXRD",
   "nomad-polymerization-reactions",
   "nomad-ml-workflows",
