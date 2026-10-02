@@ -57,7 +57,6 @@ nomad-polymerization-reactions = { workspace = true }
 nomad-ml-workflows = { workspace = true }
 nomad-gui = { workspace = true }
 # nomad-plugin-tutorial = { workspace = true }
-nomad-simulations = { workspace = true }
 basesection-migration = { workspace = true }
 # nomad-gui = { index = "nomad-gui" }
 

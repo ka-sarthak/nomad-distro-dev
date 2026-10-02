@@ -34,9 +34,6 @@
 [submodule "ui"]
 	path = ui
 	url = git@gitlab.mpcdf.mpg.de:nomad-lab/nomad-gui.git
-[submodule "packages/nomad-simulations"]
-	path = packages/nomad-simulations
-	url = git@github.com:FAIRmat-NFDI/nomad-simulations.git
 [submodule "packages/basesections-migration"]
 	path = packages/basesections-migration
 	url = git@github.com:FAIRmat-NFDI/basesections-migration.git
