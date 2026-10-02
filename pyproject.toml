@@ -50,7 +50,6 @@ nomad-measurements = { workspace = true }
 nomad-analysis = { workspace = true }
 nomad-auto-xrd = { workspace = true }
 nomad-docs = { workspace = true }
-pdi-nomad-plugin = { workspace = true }
 nomad-crystallm = { workspace = true }
 nomad-dtu-nanolab-plugin = { workspace = true }
 nomad-polymerization-reactions = { workspace = true }
