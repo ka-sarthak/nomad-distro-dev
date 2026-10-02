@@ -19,7 +19,7 @@ dependencies = [
   "nomad-dtu-nanolab-plugin",
   # "nomad-docs",
   # "crystallm",
-  "pdi-nomad-plugin",
+  # "pdi-nomad-plugin",
   "nomad-crystallm[cpu-action]",
   "scipy==1.15.3", # pinning scipy to avoid issues with statsmodels
   "basesection-migration",
@@ -34,7 +34,7 @@ dependencies = [
   # "nomad-plugin-tutorial",
   # "marimo>=0.21.1",
   "nomad-catalysis>=1.0.6",
-  "nomad-simulations",
+  # "nomad-simulations",
 ]
 
 [tool.uv.workspace]
