@@ -52,13 +52,13 @@ nomad-auto-xrd = { workspace = true }
 nomad-docs = { workspace = true }
 pdi-nomad-plugin = { workspace = true }
 nomad-crystallm = { workspace = true }
-basesection-migration = { workspace = true }
 nomad-dtu-nanolab-plugin = { workspace = true }
 nomad-polymerization-reactions = { workspace = true }
 nomad-ml-workflows = { workspace = true }
 nomad-gui = { workspace = true }
 # nomad-plugin-tutorial = { workspace = true }
 nomad-simulations = { workspace = true }
+basesection-migration = { workspace = true }
 # nomad-gui = { index = "nomad-gui" }
 
 [tool.uv]
